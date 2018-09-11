@@ -29,17 +29,20 @@ nav .current {
     background-color: orange;
     padding:15px;
 }
-
+/*
 words{
     font-size: 17px;
     text-align:left;
     padding: 8px;
-}
+}*/
 
 #bodyOfText1 {
      border-top: 2px dashed white;
      border-bottom: 2px dashed white;
      margin-left: 30px;
+     font-size: 17px;
+    text-align:left;
+    padding: 8px;
 }
 
 #video1 {

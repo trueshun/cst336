@@ -1,0 +1,111 @@
+body{
+    background:#181818;
+}
+header{
+    padding-left: 10px;
+}
+#box{
+    border: 2px solid white;
+    width:800px;
+	height: 100%;
+	margin: 0 auto;
+	background-color:#FC786B;
+	color:white;
+	font-family: Arial;
+}
+
+#navsav {
+     background-color:#494B49;
+     padding:15px;
+     font-size: 18px;
+}
+
+#navsav a{
+    color: white;
+    padding:5px;
+}
+
+nav .current {
+    background-color: orange;
+    padding:15px;
+}
+
+words{
+    font-size: 17px;
+    text-align:left;
+    padding: 8px;
+}
+
+#bodyOfText1 {
+     border-top: 2px dashed white;
+     border-bottom: 2px dashed white;
+     margin-left: 30px;
+}
+
+#video1 {
+    display: block;
+    margin: 0 auto;
+    width:50%;
+}
+
+footer{
+    clear:both; /*right*/
+    text-align: center;
+    font-size: 10px;
+    /*border:5px solid teal;*/
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr{
+    width:25%;
+}
+span{
+    font-style: italic;
+}
+
+#pic1{
+    float:left;
+    margin-top: 1px;
+}
+#techText{
+    margin-right: 8px;
+}
+#pic2 {
+    float:right;
+    margin-top: 1px;
+}
+#techtext2 {
+    clear:left;
+    margin-left: 36px;
+}
+
+#techtext3 {
+    padding: 20px;
+    margin-left: 10px;
+}
+
+#pic3{
+    float:right;
+    margin-top: 1px;
+}
+#mainText{
+    margin-left: 40px;
+}
+#pic4 {
+    clear:right;
+    float: left;
+   padding-top: 15px;
+}
+#secText{
+    padding-top: 50px;
+    margin-right: 30px;
+}
+
+#setUp{
+    margin-left: 25px;
+}

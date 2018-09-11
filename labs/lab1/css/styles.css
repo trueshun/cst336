@@ -48,7 +48,11 @@ footer {
     font-size: small;
     color: teal;
 }
-
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
 table {
     margin: 0px auto; /*When you provide only two values to margin, the first is applied to the top and bottom, the second is applied to the left and the right. */
 }

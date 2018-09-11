@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<!--
+
+Homework 1
+Website on Leap Motion Technology
+
+contains: index, technology, benifits, feedback
+-->
+
+<!-- This is the head -->
+<!-- All styles and javascript go inside the head -->
+    <head>
+        <meta char="utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/hw1.css" />
+        <title> Leap Motion - Technology</title>
+    </head>
+<!-- closing head -->
+
+    <!-- This is the body -->
+    <!-- This is where we place the content of our website -->
+    <body>
+        <div id="box">
+            <header>
+                <div class="space1"><h1> Leap Motion VR</h1></div>
+            </header>
+            <div id="navsav">
+                <nav>
+                    <a href="index.html">Home</a> 
+                    <a class="current" href="technology.html">Technology</a><!-- DON'T FORGET TO SET AS CURRENT ON EACH PAGE -->
+                    <a href="benefits.html">Benefits</a>
+                    <a href="connecting.html">Connecting</a>
+                </nav>
+            </div>
+            
+            <br /><br />
+            
+            <main>
+                <figure id="pic1">
+                     <img src="img/leapdiagram2.jpg"/>
+                 </figure>
+                 <div id = "techText">
+                     <h2>In-Depth</h2>
+                     There are two cameras indicated by the orange squares. These two send images to the computer for processing
+                     via a high-speed USB interface which is indicated by the red square. The USB interface is capable of transferring 
+                     data at 5 Gbps. There is a coil and capacitor to create a voltage boost converter which regulates the power 
+                     supplied to the Infrared (IR) emitters, indicated by the yellow rectangle. The high-output emitters illuminate 
+                     the area around  the Leap Motion controllers. These IR emitters provide the light that reflects off of the hands
+                     back into the camera modules, these are indicated by the purple squares.
+                </div>
+                <br />
+                <figure id="pic2">
+                    <img src="img/leaprange.png" />
+                </figure>
+                <div id="techtext2">
+                    The heart of the Leap Motion controller are the 2 cameras and 3 Infrared LEDs. These two components can track infrared 
+                    light with a wavelength of 850 nanometers. Because of its wide angle lenses, the device has a viewing range of 2 ft. The 
+                    USB interface then reads the sensor data into its own local memory and is then sent to the Leap Motion tracking software 
+                    via USB. The data at this point takes the form of a greyscale stereo image, separated into the left and right cameras.
+                </div>
+                <br />
+                <div id="techtext3">
+                    Once the image has been sent to the computer, the Orion software applies advanced algorithms to the raw sensor data.
+                    The images are analyzed to construct a 3D representation of what the controller sees. Then the tracking layer matches the data
+                    to extract tracking information like fingers and tools. The Leap Motion Service then sends the results - usually a series of frames or
+                    snapshots that contain all the tracking data - into a transport protocol. This protocol is how the service communicates with the
+                    Leap Motion Control Panel as well as native and web client libraries. This client library then organizes the data into object-oriented API
+                    structure, and from there the application logic ties into the Leap Motion input which allows for a motion-controlled experience.
+                </div>
+            </main>
+            <br />
+            <!-- This is the footer -->
+            <!-- The footer goes inside the body but not always -->
+            <footer>
+                <hr>
+                CST 336. 2018&copy; Chavez
+                <br /> <br />
+                <img src="../../img/logo.png" alt="The CSUMB logo. A otter's face with CSUMB beneath his mouth." title="OTTTERR!" class ="center"/>
+            </footer>
+            <!-- closing footer -->
+        </div>
+    </body>
+    <!-- closing body -->
+
+</html>

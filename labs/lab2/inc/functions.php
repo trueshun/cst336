@@ -1,10 +1,14 @@
 <?php
     function displayPoints($random_value1, $random_value2, $random_value3){
+
         echo "<div id='output'>";
         if($random_value1 == $random_value2 and $random_value2 == $random_value3){
             switch($random_value1){
                 case 0: $totalPoints = 1000;
                     echo "<h1>Jackpot!</h1>";
+                    echo "<audio autoplay>";
+                    echo "<source src = \"slot.mp3\" type =\"audio/mpeg\">";
+                    echo "</audio>";
                     break;
                 case 1: $totalPoints = 500;
                     break;

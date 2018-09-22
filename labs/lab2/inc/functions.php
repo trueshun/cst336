@@ -19,7 +19,8 @@
         echo "<div>";
     }
     
-function displaySymbol($random_value){
+    
+function displaySymbol($random_value, $pos){
     #or with a switch
     switch($random_value) {
         case 0: $symbol = "seven";
@@ -29,7 +30,7 @@ function displaySymbol($random_value){
         case 2: $symbol = "cherry";
             break;
         }
-        echo "<img src=\"img/$symbol.png\" alt='A $symbol' title='A FUCKING " .ucfirst($symbol).", AHHHH' />";
+        echo "<img id = 'reel$pos' src=\"img/$symbol.png\" alt='A $symbol' title='A FUCKING " .ucfirst($symbol).", AHHHH' width ='70'/>";
     }
         //$random_value = rand(0,2); // Geneartes a random value from 0 to 2
     
@@ -44,12 +45,17 @@ function displaySymbol($random_value){
     function play(){
           //create varibales to keep track of what symbol is displayed.
           
-          $random_value1 = rand(0,2);
-          displaySymbol($random_value1);
-          $random_value2 = rand(0,2);
-          displaySymbol($random_value2);
-          $random_value3 = rand(0,2);
-          displaySymbol($random_value3);
-          displayPoints($random_value1, $random_value2, $random_value3);
+          for($i=1; $i<4; $i++){
+              ${"random_value" . $i } = rand(0,2);
+              displaySymbol(${"random_value" . $i}, $i);
+          }
+          
+        //   $random_value1 = rand(0,2);
+        //   displaySymbol($random_value1);
+        //   $random_value2 = rand(0,2);
+        //   displaySymbol($random_value2);
+        //   $random_value3 = rand(0,2);
+        //   displaySymbol($random_value3);
+        //   displayPoints($random_value1, $random_value2, $random_value3);
     }
 ?>

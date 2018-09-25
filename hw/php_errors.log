@@ -1,0 +1,1 @@
+[25-Sep-2018 20:08:22 UTC] PHP Parse error:  syntax error, unexpected '$num' (T_VARIABLE), expecting case (T_CASE) or default (T_DEFAULT) or '}' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 19

@@ -1,0 +1,14 @@
+#box{
+    width:75%;
+	height: 100%;
+	margin: 0 auto;
+	font-family: Arial;
+}
+.itmes{
+	position:absolute;
+}
+#button{
+	top:250px;
+	left:730px;
+	position: relative;
+}

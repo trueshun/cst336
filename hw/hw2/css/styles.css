@@ -12,3 +12,14 @@
 	left:730px;
 	position: relative;
 }
+
+#photo{
+	position:absolute;
+	width:100px;
+	height:130px;
+	display:inline;
+}
+
+.flex-continer{
+	display:flex;
+}

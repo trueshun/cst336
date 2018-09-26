@@ -9,58 +9,22 @@
     
     //    
     $selectedBg = "$bg[$i]";
-    
-    
-    // // selecting random images
-    // $spring = array('10.gif','11.gif');
-    // //generates a random number for items
-    // $jj = rand(0, 1);
-    // //puts random number as index of spring array
-    // $selectedspring = "$spring[$jj]";
-    //<img src="img/<?php $spring = rand(0,1); echo $spring; 
    
-    $randnum = rand(1,5);
+    $randnum = rand(1,4); //might use for a loop
     
     switch($i){
         case 0: //for spring
-            for($ii=0; $ii < $randnum; $ii++)
-            {
-                // selecting random images
-                $spring = array('10.gif','11.gif');
-                //generates a random number for items
-                $jj = rand(0, count($spring) -1);
-                //puts random number as index of spring array
-                $selectedspring = "$spring[$jj]";
-                echo "<img src = \"img/<?php echo $selectedspring\" alt=\"spring\" / ?>";
-            }
+            $symbol = rand(10,11);
+            echo "<img id = \"photo\" src= \"img/$symbol.gif\" alt=\"Spring\" />";
             break;
+            
         case 1://for fall
-            for($ii=0; $ii < $randnum; $ii++)
-            {
-                // selecting random images
-                $fall = array('5.gif','6.gif');
-                //generates a random number for items
-                $jj = rand(0, count($fall) -1);
-                //puts random number as index of array.
-                $selectedfall = "$fall[$jj]";
-                //puts random number as index of spring array
-                $selectedfall = "$fall[$jj]";
-                echo "<img src = \"img/<?php echo $selectedfall\" alt=\"fall\" / ?>";
-            }
+            $symbols= rand(5,6);
+            echo "<img id = \"photo\" src = \"img/$symbols.gif\" alt=\"fall\" />";
             break;
         case 2://for winter
-            for($ii=0; $ii < $randnum; $ii++)
-            {
-                // selecting random images
-                $winter = array('7.gif','8.gif');
-                //generates a random number for items
-                $jj = rand(0, count($winter) -1);
-                //puts random number as index of array.
-                $selectedwinter = "$winter[$jj]";
-                //puts random number as index of spring array
-                $selectedwinter = "$winter[$jj]";
-                echo "<img src = \"img/<?php echo $selectedspring\" alt=\"winter\" / ?>";
-            }
+            $symbol = rand(7,8);
+            echo "<img id= \"photo\" src = \"img/$symbol.gif\" alt=\"winter\" />";
             break;
     }
 ?>
@@ -83,7 +47,7 @@
     
     <div>
         <body>
-            <div class = "items">
+            <div class = "flex-container">
                 <form id="button">
                     <input type ="submit" value = "generate" />
                 </form>

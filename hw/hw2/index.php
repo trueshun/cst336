@@ -9,7 +9,7 @@
     //    
     $selectedBg = "$bg[$i]";
     
-    $numran = rand(1,6);
+    $numran = rand(1,2);
     switch($i){
         case 0: //for spring
             //for($ii=0;$ii<$numran; $ii++)

@@ -6,25 +6,49 @@
     
     //generates a random number for background.
     $i = rand(0, count($bg)-1);
-    
     //    
     $selectedBg = "$bg[$i]";
-   
-    $randnum = rand(1,4); //might use for a loop
     
+    $numran = rand(1,6);
     switch($i){
         case 0: //for spring
-            $symbol = rand(10,11);
-            echo "<img id = \"photo\" src= \"img/$symbol.gif\" alt=\"Spring\" />";
+            //for($ii=0;$ii<$numran; $ii++)
+            while($numran != 0)
+            {
+                $springSymbol = rand(10,11);
+                if($springSymbol == 10)
+                {
+                    echo "<img id = \"photo\" src= \"img/$springSymbol.gif\" alt=\"Spring\" />";
+                }
+                else{
+                    echo "<img id = \"photo\" src= \"img/$springSymbol.gif\" alt=\"Spring\" />";
+                }
+                $numran--;
+            }
             break;
             
         case 1://for fall
-            $symbols= rand(5,6);
-            echo "<img id = \"photo\" src = \"img/$symbols.gif\" alt=\"fall\" />";
+            for($ii=0;$ii<$numran; $ii++){
+                $fallSymbols= rand(5,6);
+                if($fallSymbols == 5){
+                    echo "<img id = \"photo\" src = \"img/$fallSymbols.gif\" alt=\"fall\" />";
+                }
+                else{
+                    echo "<img id = \"photo\" src = \"img/$fallSymbols.gif\" alt=\"fall\" />";
+                }
+            }
             break;
         case 2://for winter
-            $symbol = rand(7,8);
-            echo "<img id= \"photo\" src = \"img/$symbol.gif\" alt=\"winter\" />";
+            for($ii=0;$ii<$numran; $ii++){
+                $winterSymbol = rand(7,8);   
+                
+                if($winterSymbol == 7){
+                    echo "<img id= \"photo\" src = \"img/$winterSymbol.gif\" alt=\"winter\" />";
+                }
+                else{
+                    echo "<img id= \"photo\" src = \"img/$winterSymbol.gif\" alt=\"winter\" />";
+                }
+            }
             break;
     }
 ?>
@@ -39,13 +63,13 @@
                 background-image: url('img/<?php echo $selectedBg ?>');
                 background-repeat: no-repeat;
                 background-size: contain;
+                max-height:100px;
+                max-width:200px;
                 padding:15%;
-                width:30%;
             }
         </style>
     </head>
     
-    <div>
         <body>
             <div class = "flex-container">
                 <form id="button">
@@ -53,5 +77,4 @@
                 </form>
             </div>
         </body>
-    </div>
 </html>

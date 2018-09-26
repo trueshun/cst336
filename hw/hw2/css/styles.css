@@ -1,6 +1,6 @@
 #box{
-    width:75%;
-	height: 100%;
+    width:45%;
+	height: 45%;
 	margin: 0 auto;
 	font-family: Arial;
 }
@@ -17,9 +17,17 @@
 	position:absolute;
 	width:100px;
 	height:130px;
-	display:inline;
+	/*display:inline;*/
 }
 
 .flex-continer{
 	display:flex;
+}
+
+footer{
+    font-family: "Times New Roman", Georgia, Serif;
+    font-size:.8em;
+    width:600px;
+    margin:0 auto;
+    padding-top:80px;
 }

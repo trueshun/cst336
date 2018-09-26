@@ -9,7 +9,7 @@
     //    
     $selectedBg = "$bg[$i]";
     
-    $numran = rand(1,2);
+    $numran = rand(1,3);
     switch($i){
         case 0: //for spring
             //for($ii=0;$ii<$numran; $ii++)
@@ -75,6 +75,14 @@
                 <form id="button">
                     <input type ="submit" value = "generate" />
                 </form>
+                <footer>
+                    <hr>
+                    CST 336. 2018&copy; Chavez
+                    <br /> <br />
+                    <img src="../../img/logo.png" alt="The CSUMB logo. A otter's face with CSUMB beneath his mouth." title="OTTTERR!" class ="center"/>
+                   
+                    <img src="../../img/buddy_verified.png"  alt ="buddy badge" />
+                </footer>
             </div>
         </body>
 </html>

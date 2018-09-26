@@ -27,7 +27,9 @@
 footer{
     font-family: "Times New Roman", Georgia, Serif;
     font-size:.8em;
-    width:600px;
+    width:430px;
+    text-align: center;
     margin:0 auto;
-    padding-top:80px;
+    margin-top: 210px;
+    position:absolute;
 }

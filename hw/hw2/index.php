@@ -78,8 +78,8 @@
                 <footer>
                     <hr>
                     CST 336. 2018&copy; Chavez
-                    <br /> <br />
-                    <img src="../../img/logo.png" alt="The CSUMB logo. A otter's face with CSUMB beneath his mouth." title="OTTTERR!" class ="center"/>
+                    <br />
+                    <img src="../../img/logo.png" alt="The CSUMB logo." title="OTTTERR!" class ="center"/>
                    
                     <img src="../../img/buddy_verified.png"  alt ="buddy badge" />
                 </footer>

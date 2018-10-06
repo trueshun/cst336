@@ -71,29 +71,34 @@ function formIsValid() {
 
         <form method="GET">
             
+            
             <input type="text" name="keyword" size="15" placeholder="Keyword" value="<?=$_GET['keyword']?>" />
             
-            <input type="radio" name="layout" value="horizontal" 
-              <?php
-              
-                if ($_GET['layout'] == "horizontal") {
-                    echo " checked";
-                }
-              
-              ?>
+            <div id = "layoutStyle">
+                <input type="radio" name="layout" value="horizontal" 
+                  <?php
+                  
+                    if ($_GET['layout'] == "horizontal") {
+                        echo " checked";
+                    }
+                  
+                  ?>
+                 
+                > Horizontal <br />
+                <input type="radio" name="layout" value="vertical"  
+                   <?= ($_GET['layout'] == "vertical")?" checked":"" ?>  > Vertical
             
-            > Horizontal
-            <input type="radio" name="layout" value="vertical"  
-               <?= ($_GET['layout'] == "vertical")?" checked":"" ?>  > Vertical
-        
-
+            </div>
+            <br />
             <select name="category">
                 <option value=""> Select One </option>
                 <option value="ocean">Sea</option>
                 <option>Mountains</option>
                 <option>Forest</option>
                 <option  <?= ($_GET['category'] == "Sky")?" selected":"" ?> >Sky</option>
-            </select>
+            </select> 
+            
+            <br /> <br />
             
             <input type="submit" name="submitBtn" value="Submit!!" />
             
@@ -153,4 +158,13 @@ function formIsValid() {
        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
        
     </body>
+    
+    <footer>
+        <hr>
+        CST 336. 2018&copy; Chavez
+        <br /> <br />
+        <img src="../../img/logo.png" alt="The CSUMB logo. A otter's face with CSUMB beneath his mouth." title="OTTTERR!" class ="center"/>
+       
+        <img src="../../img/buddy_verified.png"  alt ="buddy badge" />
+    </footer>
 </html>

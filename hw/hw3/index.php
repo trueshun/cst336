@@ -1,5 +1,28 @@
 <?php
 
+    // if($_SERVER["REQUEST_METHOD"] == "POST"){
+    //     if(!empty($_POST["question-4-answers"])){
+    //         foreach($_POST["question-4-answers"] as $checked)
+    //         {
+    //             echo  $checked;
+    //         }
+    //     }
+    //     else{
+    //         echo 'Please select a pokemon.';
+    //     }
+    // }
+    
+    // if(isset($_POST["sumbit"])){
+    //     if(!empty($_POST["question-4-answers"])){
+    //         foreach($_POST["question-4-answers"] as $question4answers)
+    //         {
+    //             echo '<p>' . $question4answers . '</p>';
+    //         }
+    //     }
+    // }
+    // else{
+    //     echo 'Please select at least one pokemon';
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +63,7 @@
                 <h2>2. Are you a: </h2>
                 <div>
                     <input type ="radio" name = "question-2-answers" value="guy">Guy
+                    
                 </div>
                 <div>
                     <input type="radio" name = "question-2-answers" value ="chick">Chick
@@ -54,27 +78,46 @@
             </li>
             <!-- Question 4 -->
             <li>
-                <h2>Pick the three starter pokemon from the Kanto region</h2>
+                <h2>4. Which is a starter pokemon from the Kanto region</h2>
                 <div>
-                    <input type ="checkbox" name = "question-4-answers" value ="char">
-                    <label for = "question-4-answers-char">Charmander</label>
+                    <input type ="checkbox" name = "question-4-answers" value ="ony">
+                    <label for = "question-4-answers-char">Onyx</label>
                 </div>
                 <div>
-                    <input type = "checkbox" name = "question-4-answers" value ="bulb">
-                    <label for="question-4-answers-bulb">Bulbasaur</label>
+                    <input type = "checkbox" name = "question-4-answers" value ="abra">
+                    <label for="question-4-answers-bulb">Abra</label>
                 </div>
                 <div>
-                    <input type = "checkbox" name = "question-4-answers" value = "squrt">
-                    <label for ="question-4-answers-squrt">Squirtle</label>
+                    <input type = "checkbox" name = "question-4-answers" value = "kaka">
+                    <label for ="question-4-answers-squrt">kakashi</label>
                 </div>
                 <div>
-                    <input type = "checkbox" name = "question-4-answers" value = "psy">
-                    <label for="question-4-answers-psy">Psyduck</label>
+                    <input type = "checkbox" name = "question-4-answers" value = "none">
+                    <label for="question-4-answers-psy">none of the above</label>
                 </div>
             </li>
             
+            <li>
+                <h2>5.What's Professor Oak's grandson's name?</h2>
+                <div>
+                    <input type="radio" name = "question-5-answers" value = "A">
+                    <label for="question-5-answers">Loser</label>
+                </div>
+                <div>
+                    <input type="radio" name = "question-5-answers" value = "B">
+                    <label for="question-5-answers">Ass</label>
+                </div>
+                <div>
+                    <input type="radio" name = "question-5-answers" value = "C">
+                    <label for="question-5-answers">Smell ya later</label>
+                </div>
+                <div>
+                    <input type="radio" name = "question-5-answers" value = "D">
+                    <label for="question-5-answers">Gary</label>
+                </div>
+            </li>
             <br />
-            <input type= "submit" value = "Submit quiz!">
+            <input type= "submit" name = "submit" value = "Submit quiz!">
         </form>
     </body>
 </html>

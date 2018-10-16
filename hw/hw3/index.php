@@ -12,7 +12,7 @@
             <!-- question 1 -->
             <!-- radio type -->
             <li>
-                <h2>CSS stands for: </h2>
+                <h2>1. CSS stands for: </h2>
                 
                 <div>
                     <input type = "radio" name = "question-1-answers" id = "question-1-answers-A" value ="A">
@@ -26,7 +26,7 @@
                 
                 <div>
                     <input type = "radio" name= "question-1-answers" value ="C">
-                    <label for ="question-1-answers-C">C. Crazy Slip Slide</label>
+                    <label for ="question-1-answers-C">C. Crazy Slip'n Slide</label>
                 </div>
                 
                 <div>
@@ -37,15 +37,43 @@
             
             <!-- Question 2 -->
             <li>
-                <h2>Are you a: </h2>
+                <h2>2. Are you a: </h2>
                 <div>
-                    <input type ="checkbox" name = "question-2-answers" value="guy">Dude
+                    <input type ="radio" name = "question-2-answers" value="guy">Guy
                 </div>
                 <div>
-                    <input type="checkbox" name = "question-2-answers" value ="chick">Dudette
+                    <input type="radio" name = "question-2-answers" value ="chick">Chick
                 </div>
             </li>    
+            <!-- Question 3 -->
+            <li>
+                <h2>3. Who is Ash's main pokemon?</h2>
+                <div>
+                    <input type = "text" name = "question-3-answers" value = "">
+                </div>
+            </li>
+            <!-- Question 4 -->
+            <li>
+                <h2>Pick the three starter pokemon from the Kanto region</h2>
+                <div>
+                    <input type ="checkbox" name = "question-4-answers" value ="char">
+                    <label for = "question-4-answers-char">Charmander</label>
+                </div>
+                <div>
+                    <input type = "checkbox" name = "question-4-answers" value ="bulb">
+                    <label for="question-4-answers-bulb">Bulbasaur</label>
+                </div>
+                <div>
+                    <input type = "checkbox" name = "question-4-answers" value = "squrt">
+                    <label for ="question-4-answers-squrt">Squirtle</label>
+                </div>
+                <div>
+                    <input type = "checkbox" name = "question-4-answers" value = "psy">
+                    <label for="question-4-answers-psy">Psyduck</label>
+                </div>
+            </li>
             
+            <br />
             <input type= "submit" value = "Submit quiz!">
         </form>
     </body>

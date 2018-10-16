@@ -1,10 +1,10 @@
 <?php
-    $answer1 = $_POST['question-1-answers'];
-    $answer2 = $_POST['question-2-answers'];
-    $answer3 = $_POST['question-3-answers'];
-    $answer4 = $_POST['question-4-answers'];
-    $answer5 = $_POST['question-5-answers'];
-    $answer6 = $_POST['question-6-answers'];
+    $answer1 = $_GET['question-1-answers'];
+    $answer2 = $_GET['question-2-answers'];
+    $answer3 = $_GET['question-3-answers'];
+    $answer4 = $_GET['question-4-answers'];
+    $answer5 = $_GET['question-5-answers'];
+    $answer6 = $_GET['question-6-answers'];
     
     $totalCorrect = 0;
     $congrats = "";

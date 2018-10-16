@@ -1,12 +1,27 @@
 .container{
     margin:0 auto;
 	width:705px;
-	height:850px;
+	height:880px;
     font-family: arial;
     padding: 50px;
     border: solid black 1px;
+    background-image: url("../img/bg.png");
+    opacity: .7;
 }
 
 body{
-    background-image: 
+    background-image: url("../img/b2.jpg");
+}
+
+footer{
+    text-align: center;
+}
+
+.check{
+    text-align: center;
+    color:red;
+}
+
+h1{
+    font-size: 40px;
 }

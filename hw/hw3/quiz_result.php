@@ -6,12 +6,13 @@
     $answer5 = $_POST['question-5-answers'];
     
     $totalCorrect = 0;
+    $gender ="";
     
     if($answer1 == "B") {$totalCorrect++;}
-    if($answer2 == "A") {$totalCorrect++;}
+    if($answer2 == "guy") {$gender = "you're a dude";}if($answer2 == "chick"){$gender = "you're a dudette";}else{$gender = "Ya both, Harry";}
     if($answer3 == "C") {$totalCorrect++;}
     if($answer4 == "D") {$totalCorrect++;}
     if($answer5) {$totalCorrect++;}
     
-    echo "<div id='results'>$totalCorrect / 5 correct</div>";
+    echo "<div id='results'>$totalCorrect / 4 correct, and $gender</div>";
 ?>

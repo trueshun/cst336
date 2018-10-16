@@ -36,6 +36,15 @@
             </li>
             
             <!-- Question 2 -->
+            <li>
+                <h2>Are you a: </h2>
+                <div>
+                    <input type ="checkbox" name = "question-2-answers" value="guy">Dude
+                </div>
+                <div>
+                    <input type="checkbox" name = "question-2-answers" value ="chick">Dudette
+                </div>
+            </li>    
             
             <input type= "submit" value = "Submit quiz!">
         </form>

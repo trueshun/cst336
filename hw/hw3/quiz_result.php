@@ -16,7 +16,7 @@
     if($answer5 == "D") {$totalCorrect++;}
     if($answer6 == "c"){$totalCorrect++;}
     
-    if($totalCorrect == 5){$congrats = "Yay, ya got them all! Doing way better than, Ash!";}
+    if($totalCorrect == 5){$congrats = "Yay, ya got them all! Doing way better than Ash!";}
     
     echo "<div id='results'>$totalCorrect / 5 correct, and $gender. $congrats </div>";
 ?>

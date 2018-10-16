@@ -38,26 +38,26 @@
                 <!-- question 1 -->
                 <!-- radio type -->
                 <or>
-                    <h2>1. CSS stands for: </h2>
+                    <h2>1. What organization are Jessie and James part of?: </h2>
                     
                     <div>
                         <input type = "radio" name = "question-1-answers" id = "question-1-answers-A" value ="A">
-                        <label for = "question-1-answers-A">A. Computer Styled Sections</label>
+                        <label for = "question-1-answers-A">A. Team Magma</label>
                     </div>
                     
                     <div>
                         <input type= "radio" name = "question-1-answers" value="B" >
-                        <label for = "question-1-answers-B">B. Cascading Style Sheets</label>
+                        <label for = "question-1-answers-B">B. Team Rocket</label>
                     </div>
                     
                     <div>
                         <input type = "radio" name= "question-1-answers" value ="C">
-                        <label for ="question-1-answers-C">C. Crazy Slip'n Slide</label>
+                        <label for ="question-1-answers-C">C. Team Aqua</label>
                     </div>
                     
                     <div>
                         <input type = "radio" name = "question-1-answers" value = "D">
-                        <label for ="question-1-answers-D">D. None of the above</label>
+                        <label for ="question-1-answers-D">D. Team Skull</label>
                     </div>
                 </or>
                 

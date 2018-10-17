@@ -1,16 +1,18 @@
 .container{
     margin:0 auto;
 	width:705px;
-	height:880px;
+	height:900px;
     font-family: arial;
     padding: 50px;
     border: solid black 1px;
-    background-image: url("../img/bg.png");
-    opacity: .7;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../img/bg.png");
+    opacity: .8;
+    border-radius: 10px;
 }
 
 body{
-    background-image: url("../img/b2.jpg");
+    background-color: white;
+    padding:25px;
 }
 
 footer{
@@ -24,4 +26,12 @@ footer{
 
 h1{
     font-size: 40px;
+    text-shadow: -.5px 0 black, 0 .5px black, .5px 0 white, 0 -.1px #3D4324;
+    text-decoration:underline;
+    margin-top: -3px;
+}
+
+input, select{
+    border-radius: 5px;
+    padding:5px;
 }

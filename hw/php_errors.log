@@ -19,3 +19,10 @@
 [16-Oct-2018 03:40:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3/index.php:0
 [16-Oct-2018 18:50:26 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/ubuntu/workspace/cst336/hw/hw3/index.php on line 5
 [16-Oct-2018 19:17:17 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/ubuntu/workspace/cst336/hw/hw3/index.php on line 8
+[16-Oct-2018 23:55:04 UTC] PHP Fatal error:  Call to undefined function valid() in /home/ubuntu/workspace/cst336/hw/hw3/quiz_result.php on line 179
+[16-Oct-2018 23:55:04 UTC] PHP Stack trace:
+[16-Oct-2018 23:55:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3/quiz_result.php:0
+[17-Oct-2018 00:00:28 UTC] PHP Fatal error:  Call to undefined function valid() in /home/ubuntu/workspace/cst336/hw/hw3/quiz_result.php on line 185
+[17-Oct-2018 00:00:28 UTC] PHP Stack trace:
+[17-Oct-2018 00:00:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3/quiz_result.php:0
+[17-Oct-2018 02:05:04 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/ubuntu/workspace/cst336/hw/hw3/quiz_result.php on line 337

@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>buckle up buckaroo, it's quiz time</title>
+        <title>HW3</title>
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
     </head>
     <body>
@@ -22,26 +22,26 @@
                 <!-- question 1 -->
                 <!-- radio type -->
                 <or>
-                    <h2>1. What organization are Jessie and James part of?: </h2>
+                    <h2>1. What organization are Jessie and James part of? </h2>
                     
                     <div>
-                        <input type = "radio" name = "question-1-answers" id = "question-1-answers-A" value ="A" required>
-                        <label for = "question-1-answers-A">A. Team Magma</label>
+                        <input type = "radio" name = "question-1-answers" id = "q1" value ="A" required>
+                        <label for = "question-1">A. Team Magma</label>
                     </div>
                     
                     <div>
-                        <input type= "radio" name = "question-1-answers" value="B" required>
-                        <label for = "question-1-answers-B">B. Team Rocket</label>
+                        <input type= "radio" name = "question-1-answers" id = "q1" value="B" required>
+                        <label for = "question-1">B. Team Rocket</label>
                     </div>
                     
                     <div>
-                        <input type = "radio" name= "question-1-answers" value ="C" required>
-                        <label for ="question-1-answers-C">C. Team Aqua</label>
+                        <input type = "radio" name= "question-1-answers" id = "q1" value ="C" required>
+                        <label for ="question-1">C. Team Aqua</label>
                     </div>
                     
                     <div>
-                        <input type = "radio" name = "question-1-answers" value = "D" required>
-                        <label for ="question-1-answers-D">D. Team Skull</label>
+                        <input type = "radio" name = "question-1-answers" id = "q1" value = "D" required>
+                        <label for ="question-1">D. Team Skull</label>
                     </div>
                 </or>
                 
@@ -50,11 +50,11 @@
                     <h2>2. Are you a: </h2>
                     <div>
                         <input type ="radio" name = "question-2-answers" value="guy" required>
-                        <label for ="question-2-answers-guy">Guy</label>
+                        <label for ="question-2-answers-guy">Boy</label>
                     </div>
                     <div>
                         <input type="radio" name = "question-2-answers" value ="chick" required>
-                        <label for="question-2-answers-chick">Chick</label>
+                        <label for="question-2-answers-chick">Girl</label>
                     </div>
                 </or>    
                 <!-- Question 3 -->
@@ -72,14 +72,6 @@
                         <label for = "question-4-answers-char">Onyx</label>
                     </div>
                     <div>
-                        <input type = "checkbox" name = "question-4-answers" value ="abra" >
-                        <label for="question-4-answers-bulb">Abra</label>
-                    </div>
-                    <div>
-                        <input type = "checkbox" name = "question-4-answers" value = "kaka" >
-                        <label for ="question-4-answers-squrt">kakashi</label>
-                    </div>
-                    <div>
                         <input type = "checkbox" name = "question-4-answers" value = "none" >
                         <label for="question-4-answers-psy">none of the above</label>
                     </div>
@@ -93,14 +85,10 @@
                     </div>
                     <div>
                         <input type="radio" name = "question-5-answers" value = "B" required>
-                        <label for="question-5-answers">Ass</label>
-                    </div>
-                    <div>
-                        <input type="radio" name = "question-5-answers" value = "C" required>
                         <label for="question-5-answers">Smell ya later</label>
                     </div>
                     <div>
-                        <input type="radio" name = "question-5-answers" value = "D" required>
+                        <input type="radio" name = "question-5-answers" value = "C" required>
                         <label for="question-5-answers">Gary</label>
                     </div>
                 </or>

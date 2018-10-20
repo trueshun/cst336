@@ -1,23 +1,16 @@
 <?php
     session_start();
+    include 'functions.php';
+    
     
     //check to see if cart is set
     if(!isset($_SESSION['cart'])){
         $_SESSION['cart'] = array();
     }
+    
     //check to see if an item has been added to the cart.
     if(isset($_POST['itemName'])){
         array_push($_SESSION['cart'],  $_POST['itemName']);
-    }
-    
-    include 'functions.php';
-    
-    //checks to see if the form submitted
-    if(isset($_GET['query'])){
-        //getting access to the walmart api function
-        include 'wmapi.php';
-        $items = getProducts($_GET['query']);
-        //print_r($items);//calling 'print_r' gives you a look of what the api has returned. 
     }
     
     //check to see if an item has been added to the cart
@@ -29,8 +22,29 @@
         $newItem['price'] = $_POST['itemPrice'];
         $newItem['image'] = $_POST['itemImage'];
         
-        //sorting the item array into the caryt array
-        array_push($_SESSION['cart'], $newItem);
+        //check to see if other items with this id are in the array
+        //if so this item itsn;t new. only update quantity
+        //must be passed by refernede so that each item can be updayed
+        foreach ($_SESSION['cart'] as &$item){
+            if($newItem['id'] == $item['id']){
+                $item['quantity'] += 1;
+                $found = true;
+            }
+        }
+        
+        //else add it to the array
+        if($found != true){
+            $newItem['quantity'] = 1;
+            array_push($_SESSION['cart'], $newItem);
+        }
+    }
+    
+    //checks to see if the form submitted
+    if(isset($_GET['query'])){
+        //getting access to the walmart api function
+        include 'wmapi.php';
+        $items = getProducts($_GET['query']);
+        //print_r($items);//calling 'print_r' gives you a look of what the api has returned. 
     }
 ?>
 

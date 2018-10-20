@@ -10,7 +10,16 @@
             }
         }
     }
-
+    
+    //if 'itemId' quantity has been snet, search for the item with taht ID and update quantity
+    if(isset($_POST['itemId'])){
+        foreach ($_SESSION['cart'] as &$item){
+            if($item['id'] == $_POST['itemId']){
+                $item['quantity'] = $_POST['update'];
+            }
+        }
+    }
+    
 ?>
 
 <!DOCTYPE html>

@@ -1,5 +1,5 @@
 <?php
-include'../../inc/dbconnection.php';
+include'../../inc/dbConnection.php';
 $dbConn = startConnection("ottermart");
 
 //Creating database connection
@@ -36,7 +36,7 @@ function filterProducts(){
     //      WHERE productName LIKE '%$product%"; //This sql works but it doesn't prevetn sql injection
     //    //name parameters are sued to prevent sql inhection
     //This SQL prevents SQL INJECTION by using a named parameter
-    $sql = "SELECT * FROM om_product WHERE 1";
+    $sql = "SELECT * FROM om_product WHERE 1";//getting all the products.
     if(!empty($product)){
         $sql .= " AND productName LIKE :product";//needs to have the space in front of the AND, else errors//cannot have two insatnces of WHERE when one has already been stated.
         $namedParameters[':product'] = "%$product%";
@@ -60,6 +60,13 @@ function filterProducts(){
     $stmt->execute($namedParameters);
     $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
     //print_r($records); //this checks to see if everything is working well.
+    
+    foreach ($records as $record){
+        echo "<a href='productInfo.php?productId=" . $record['productId'] . ">";
+        echo $record['productName'];
+        echo "</a> ";
+        echo $record['productDescription'] . " $" .  $record['price'] .   "<br>";
+    }
 }
 
 ?>
@@ -96,6 +103,7 @@ function filterProducts(){
             <br />
             <input type="submit" name="submit" value="Search!"/>
         </form>
-        
+        <br />
+        <?= filterProducts() ?>
         
 </html>

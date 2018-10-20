@@ -1,5 +1,28 @@
 <?php
 
+$q3 = $q4 = "";
+$q3 = $q4 = "";
+
+function validForm(){
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        if(empty($_GET["question-3-answers"])){
+            echo "Missing";
+            return false;
+        }
+        else{
+            $q3 = $_GET["question-3-answers"];
+        }
+        
+        if(!isset($_GET["question-4-answers"])){
+            echo "You must select 1 option";
+            return false;
+        }
+        else{
+            $q4 = $_GET["question-4-answers"];
+        }
+    }
+}
+
     function valid(){
         $valid = true;
         if(!isset($_GET['question-1-answers']) || !isset($_GET['question-2-answers']) || !isset($_GET['question-5-answers'])){

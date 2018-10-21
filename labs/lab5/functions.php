@@ -23,16 +23,16 @@
                 echo "<input type = 'hidden' name = 'itemImage' value = '$itemImage'>";
                 echo "<input type = 'hidden' name = 'itemPrice' value = '$itemPrice'>";
                 
-                echo "<td><button class = 'btn btn-warning'>Add</button></td>";
+                if($_POST['itemId'] == $itemId){
+                    echo '<td><button class = "btn btn-success" style = "color:green">Added</button></td>';
+                }else{
+                    echo '<td><button class ="btn btn-warning">Add</button></td>';
+                }
+                
+                echo "</tr>"; 
                 echo "</form>";
 
-                echo "</tr>";
-                
-                /*
-                    Cookie:  a small piece of text that is stored in the users browser. Is publickly visible to every website.
-                    Session: storing large or sensitive information. Can be used server-side. creates a session id cookie that is used to authenticate the user. Data not store on computer
-                */
-                
+                //echo "</tr>";
             }
             echo "</table>";
         }
@@ -48,18 +48,11 @@
                 $itemId = $item['id'];
                 $itemQuant = $item['quantity'];
                 
-                //display item as a table row
+                //display data for item
                 echo '<tr>';
                 echo "<td><img src='$itemImage'></td>";
                 echo "<td><h4>$itemName</h4></td>";
                 echo "<td><h4>$itemPrice</h4></td>";
-                echo "<td><h4>$itemQuant</h4></td>";
-                
-                //hidden input element conatinin the item name
-                echo "<form method = 'post'>";
-                echo "<input type = 'hidden' name = 'removeId' value = '$itemId'>";
-                echo "<td><button class = 'btn btn-danger'>Remove</button></td>";
-                echo "</form>";
                 
                 //updte form for this item
                 echo '<form method ="post">';
@@ -68,10 +61,19 @@
                 echo '<td><button class = "btn btn-danger">Update</button></td>';
                 echo '</form>';
                 
+                //create seperate form to delete
+                echo "<form method = 'post'>";
+                echo "<input type = 'hidden' name = 'removeId' value = '$itemId'>";
+                echo "<td><button class = 'btn btn-danger'>Remove</button></td>";
+                echo "</form>";
+                
                 echo "</tr>";
             }
             echo "</table>";
         }
     }
     
+    function displayCartCount(){
+        echo count($_SESSION['cart']);
+    }
 ?>

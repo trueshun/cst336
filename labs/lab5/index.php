@@ -8,9 +8,12 @@
         $_SESSION['cart'] = array();
     }
     
-    //check to see if an item has been added to the cart.
-    if(isset($_POST['itemName'])){
-        array_push($_SESSION['cart'],  $_POST['itemName']);
+    //checks to see if the form submitted
+    if(isset($_GET['query'])){
+        //getting access to the walmart api function
+        include 'wmapi.php';
+        $items = getProducts($_GET['query']);
+        //print_r($items);//calling 'print_r' gives you a look of what the api has returned. 
     }
     
     //check to see if an item has been added to the cart
@@ -39,13 +42,6 @@
         }
     }
     
-    //checks to see if the form submitted
-    if(isset($_GET['query'])){
-        //getting access to the walmart api function
-        include 'wmapi.php';
-        $items = getProducts($_GET['query']);
-        //print_r($items);//calling 'print_r' gives you a look of what the api has returned. 
-    }
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +67,9 @@
                     </div>
                     <ul class='nav navbar-nav'>
                         <li><a href='index.php'>Home</a></li>
-                        <li><a href='scart.php'>Cart</a></li>
+                        <li><a href='scart.php'>
+                        <span class='glyphicon glyphicon-shopping-cart' aria-hidden='true'>
+                        </span> Cart: <?php displayCartCount(); ?> </a></li>
                     </ul>
                 </div>
             </nav>

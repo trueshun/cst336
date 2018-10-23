@@ -10,4 +10,9 @@ form{
 
 .container{
     text-align: center;
+    color:red;
+}
+
+.displayData{
+    text-align:center;
 }

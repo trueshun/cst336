@@ -1,35 +1,21 @@
 <?php
 
-    // if (isset($_POST["location"])) {  //checks if the form has been submitted
-
-    //     $location = $_POST["location"];
+    include "functions.php";
+    
+    function isValid(){
+        $valid = true;
         
-    //     if (!empty($_POST['months'])) { //user selected a category
-            
-    //         $keyword = $_POST['months'];
-    //     }
-              
-    // }
-    
-    // function formIsValid(){
-    //     if(empty($_POST['location'] && empty($_POST['months']))){
-    //         echo "Error you need to pick the month or location";
-    //     }
-    //     return true;
-    // }
-    
-    $monthsErr = $locationErr = "";
-    $months = $location = "";
-    
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        if (empty($_POST["months"])){
-            $monthsErr = "Missing";
+        if(!isset($_GET["location"]) || $_GET["location"] > 0){
+            echo "<h4>Please select the number of locations.</h4>";
+            $valid = false;
         }
-        else{
-            $months = $_POST["months"];
+        if(!isset($_GET["months"]) || $_GET["months"] == ""){
+            echo '<h4>Please select a month.</h4>';
+            $valid = false;
         }
-        if(!isset)
+        return $valid;
     }
+    
 ?>
 
 <!DOCTYPE html>
@@ -46,27 +32,28 @@
         <div class="jumbotron">
             <h1> Winter Vacation Planner ! </h1>
         </div>
-        <form method = "POST">
+        <form method = "get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             Select Month: 
             <select name="months">
-                <option value ="nov">November</option>
-                <option value ="dec">December</option>
-                <option value ="jan">January</option>
-                <option  <?= ($_POST['months'] == "February")?" selected":"" ?>February</option>
+                <option value ="" >Select</option> 
+                <option value ="november">November</option>
+                <option value ="december">December</option>
+                <option value ="january">January</option>
+                <option value ="february">February</option>
             </select> 
             
             <br />
             Number of locations:
-            <input type="radio" name="location" value="three"><strong>Three</strong>
+            <input type="radio" name ="location" value ="three"><strong>Three</strong>
             <input type="radio" name ="location" value ="four"><strong>Four</strong>
             <input type="radio" name ="location" value ="five"><strong>Five</strong>
             
             <br />
             Select Country: 
             <select name ="country">
-                <option value="usa">USA</option>
-                <option value ="mex">Mexico</option>
-                <option value ="fra">France</option>
+                <option value="USA">USA</option>
+                <option value ="Mexico">Mexico</option>
+                <option value ="France">France</option>
             </select>
             <br />
             Visit locations in alphabetical order:
@@ -76,8 +63,18 @@
             <input type = "submit" name ="sumbit" value ="Create Itinerary">
         </form>
         <br />
-        <div class = "container">
-            <?php formIsValid(); ?>
+        
+        <div class="container">
+            <?php isValid(); ?>
+        </div>
+        <div class ="displayData">
+            <?php 
+                if(isset($_GET["months"])){
+                    displayHeader();
+                    generateTable();
+                    displaySubheader();
+                }
+            ?>
         </div>
     </body>
 </html>

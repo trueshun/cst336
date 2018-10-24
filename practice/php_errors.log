@@ -72,3 +72,24 @@
 [23-Oct-2018 21:16:00 UTC] PHP Fatal error:  Call to undefined function generateTable() in /home/ubuntu/workspace/cst336/practice/midterm/index.php on line 68
 [23-Oct-2018 21:16:00 UTC] PHP Stack trace:
 [23-Oct-2018 21:16:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm/index.php:0
+[24-Oct-2018 00:59:51 UTC] PHP Fatal error:  Call to undefined method PDOStatement::fetch_assoc() in /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php on line 20
+[24-Oct-2018 00:59:51 UTC] PHP Stack trace:
+[24-Oct-2018 00:59:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php:0
+[24-Oct-2018 01:13:28 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php on line 17
+[24-Oct-2018 01:13:28 UTC] PHP Stack trace:
+[24-Oct-2018 01:13:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php:0
+[24-Oct-2018 01:13:28 UTC] PHP   2. displayBetween() /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php:36
+[24-Oct-2018 01:15:27 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php on line 17
+[24-Oct-2018 01:15:27 UTC] PHP Stack trace:
+[24-Oct-2018 01:15:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php:0
+[24-Oct-2018 01:15:27 UTC] PHP   2. displayBetween() /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php:38
+[24-Oct-2018 01:15:28 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php on line 17
+[24-Oct-2018 01:15:28 UTC] PHP Stack trace:
+[24-Oct-2018 01:15:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php:0
+[24-Oct-2018 01:15:28 UTC] PHP   2. displayBetween() /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php:38
+[24-Oct-2018 02:19:07 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''mp_town' WHERE 1' at line 1' in /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php:35
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php(35): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php(74): displayMaxMinPop()
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php on line 35

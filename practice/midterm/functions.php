@@ -46,7 +46,7 @@
         }
         
         if(($input != "") && (isset($_GET["location"]))){
-            echo "<br /> <br /><table align='center' style = 'width:25%' border ='1px solid black'>";
+            echo "<br /> <br /><table align='center' style = 'width:40%' border ='1px solid black'>";
             
             for($i=0;$i <5;$i++){
                 echo "<tr>";
@@ -73,6 +73,7 @@
         global $input, $location, $country;
         echo "<hr>";
         echo "<h3>Monthly Itinerary</h3>";
-        echo "<h4>Month: ".$input.", Visting ".$location. " places in ".$country."</h4>";
+        echo "<h4>Month: ".ucfirst($input).", Visting ".$location. " places in ".$country."</h4>";
     }
+    
 ?>

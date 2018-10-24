@@ -93,3 +93,7 @@ Stack trace:
 #1 /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php(74): displayMaxMinPop()
 #2 {main}
   thrown in /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php on line 35
+[24-Oct-2018 03:54:32 UTC] PHP Fatal error:  Call to undefined method PDO::fetchAll() in /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php on line 131
+[24-Oct-2018 03:54:32 UTC] PHP Stack trace:
+[24-Oct-2018 03:54:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php:0
+[24-Oct-2018 03:54:32 UTC] PHP   2. countiesWithNoTown() /home/ubuntu/workspace/cst336/practice/midterm/midterm_practice2.php:166

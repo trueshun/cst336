@@ -1,5 +1,5 @@
 <?php
-    include'../../inc/dbConnection.php';
+    include'dbConnection1.php';
     $dbConn = startConnection("midtermPrac");
     //creating database connection
     $host = "localhost";
@@ -69,6 +69,71 @@
             echo $record['county_name'] . "<br />";
         }
     }
+    
+    function populationByCounty(){
+        global $dbConn;
+        
+        echo"<h3>5. Population by county.</h3><br />";
+        $sql = "SELECT county_name, SUM(population) total FROM mp_town JOIN
+                mp_county ON mp_town.county_id = mp_county.county_id GROUP BY county_name";
+        
+        $stmt = $dbConn->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        foreach($records as $record){
+            echo $record['county_name'] . " " . $record['total'] . "<br />";
+        }
+    }
+    
+    function townWithCountyName(){
+        global $dbConn;
+        
+        echo "<h3>6. Display towns/cities with county name.</h3><br />";
+        $sql = "SELECT town_name, county_name FROM mp_town JOIN mp_county ON 
+                mp_town.county_id = mp_county.county_id";
+                
+        $stmt= $dbConn->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        foreach($records as $record){
+            echo $record['town_name'] . " - " . $record['county_name'] . "<br />";
+        }
+    }
+    
+    function populationByState(){
+        global $dbConn;
+        
+        echo "<h3>7. Population by state.</h3><br />";
+        $sql = "SELECT state_name, SUM(population) total FROM mp_town JOIN
+                mp_county ON mp_town.county_id = mp_county.county_id JOIN mp_state ON
+                mp_county.state_id = mp_state.state_id GROUP BY state_name";
+                
+        $stmt = $dbConn->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        foreach($records as $record){
+            echo $record['state_name'] . " - " . $record['total'] . "<br />";
+        }
+    }
+    
+    function countiesWithNoTown(){
+        global $dbConn;
+        
+        echo "<h3>8. Display counties withot a town.</h3><br />";
+        $sql = "SELECT county_name FROM mp_county LEFT JOIN mp_town ON 
+                mp_county.county_id = mp_town.county_id WHERE mp_town.county_id IS NULL";
+        
+        $stmt=$dbConn->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        foreach($records as $record){
+            echo $record['county_name'] . "<br />";
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -91,6 +156,15 @@
         <?= displayLast3(); ?>
         <hr>
         <?= displayAllS(); ?>
+        <hr>
+        <?= populationByCounty(); ?>
+        <hr>
+        <?= townWithCountyName(); ?>
+        <hr>
+        <?= populationByState(); ?>
+        <hr>
+        <?= countiesWithNoTown(); ?>
+        
         <hr>
         <div id="rubric2Div">  
   <table border=1 width="600" align='center'>

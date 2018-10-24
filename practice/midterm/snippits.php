@@ -3,6 +3,44 @@
     $mexico = array("acapulco.png", "cabos.png", "cancun.png", "chichenitza.png", "huatulco.png", "mexico_city.png");
     $france = array("bordeaux.png", "le_havre.png", "lyon.png", "montpellier.png", "paris.png", "strasbourg.png");
     
+    function table($month){
+    //The number of days per month are:
+    //Feb-28, 4 weeks
+    //Nov-30, 5 weeks
+    //Dec and Jan: 31 5 weeks
+    $ctn = 1;
+    echo "<table>";
+    if($month == "February"){
+        for($i = 0; $i < 4; $i++){
+            echo "<tr>";
+            for($k = 0; $k < 7; $k++){
+                echo "<td>". $ctn . "</td>";
+                $ctn++;
+            }
+            echo "</tr>";
+        }
+    }
+     if($month == "December" || $month == "January" || $month == "November"){
+         for($i = 0; $i < 5; $i++){
+             echo "<tr>";
+            for($k = 0; $k < 7; $k++){
+                if($month == "December" || $month == "January"){
+                    if($ctn < 32){
+                        echo "<td>". $ctn . "</td>";
+                        $ctn++; 
+                }   
+                }
+                if($month == "November"){
+                    if($ctn < 31){
+                        echo "<td>". $ctn . "</td>";
+                         $ctn++; 
+                  }  
+                }
+            }
+            echo "</tr>";
+        }
+    }
+    
     function selectMonth($value) {
         if ($_GET["month"] == $value) {
             echo "selected";

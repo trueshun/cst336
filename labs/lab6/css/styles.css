@@ -1,9 +1,9 @@
 .container{
     margin:0 auto;
 	width:885px;
-	height:1480px;
+	height:1535px;
 	background-color:#F3B7DB;
-	opacity:.9;
+	
 	border:2px solid white;
 	padding:20px;
 	font-family:arial;
@@ -12,5 +12,6 @@
 }
 body{
     background-image:url("../img/bg3.png");
+    background-size:cover;
     background-repeat:no-repeat;
 }

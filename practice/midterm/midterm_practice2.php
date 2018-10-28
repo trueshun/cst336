@@ -1,5 +1,5 @@
 <?php
-    include'dbConnection1.php';
+    include'../../inc/dbConnection.php';
     $dbConn = startConnection("midtermPrac");
     //creating database connection
     $host = "localhost";

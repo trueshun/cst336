@@ -1,14 +1,7 @@
 <?php
-include'../../inc/dbConnection.php';
-$dbConn = startConnection("ottermart");
 
-//Creating database connection
-$host = "localhost";
-$dbname = "ottermart";
-$username = "root";
-$password = "";
-$dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);//creates database connection
-$dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//creates the database connection
+include '../../inc/dbConnection.php';
+$dbConn = startConnection("ottermart");
 
 function displayCategories() { 
     global $dbConn;
@@ -27,46 +20,61 @@ function displayCategories() {
     }
 }
 
-function filterProducts(){
+function filterProducts() {
     global $dbConn;
+    
     $namedParameters = array();
     $product = $_GET['productName'];
     
+    //This SQL works but it doesn't prevent SQL INJECTION (due to the single quotes)
     //$sql = "SELECT * FROM om_product
-    //      WHERE productName LIKE '%$product%"; //This sql works but it doesn't prevetn sql injection
-    //    //name parameters are sued to prevent sql inhection
-    //This SQL prevents SQL INJECTION by using a named parameter
-    $sql = "SELECT * FROM om_product WHERE 1";//getting all the products.
-    if(!empty($product)){
-        $sql .= " AND productName LIKE :product";//needs to have the space in front of the AND, else errors//cannot have two insatnces of WHERE when one has already been stated.
-        $namedParameters[':product'] = "%$product%";
+    //        WHERE productName LIKE '%$product%'";
+  
+    $sql = "SELECT * FROM om_product WHERE 1"; //Gettting all records from database
+    
+    if (!empty($product)){
+        //This SQL prevents SQL INJECTION by using a named parameter
+         $sql .=  " AND productName LIKE :product";
+         $namedParameters[':product'] = "%$product%";
     }
     
-    if(!empty($_GET['category'])){
-        $sql .= " AND catId = :category";//needs to have the space in front of the AND, else errors//cannot have two insatnces of WHERE when one has already been stated.
-        $namedParameters[':category'] = $_GET['category'] ;
+    if (!empty($_GET['category'])){
+        //This SQL prevents SQL INJECTION by using a named parameter
+         $sql .=  " AND catId =  :category";
+          $namedParameters[':category'] = $_GET['category'] ;
     }
     
-    if(isset($_GET['orderBy'])){//for checkboxes and radio
-        if($_GET['orderBy'] == "productPrice"){
-            $sql .= " ORDER BY productName";
+    //echo $sql;
+    
+    if (isset($_GET['orderBy'])) {
+        
+        if ($_GET['orderBy'] == "productPrice") {
+            
+            $sql .= " ORDER BY price";
+        } else {
+            
+              $sql .= " ORDER BY productName";
         }
-        else{
-            $sql .= " ORDER BY productName";
-        }
+        
+        
     }
-    
+
     $stmt = $dbConn->prepare($sql);
     $stmt->execute($namedParameters);
-    $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    //print_r($records); //this checks to see if everything is working well.
+    $records = $stmt->fetchAll(PDO::FETCH_ASSOC);  
+    //print_r($records);
     
-    foreach ($records as $record){
-        echo "<a href='productInfo.php?productId=" . $record['productId'] . ">";
+    
+    foreach ($records as $record) {
+        
+        echo "<a href='productInfo.php?productId=".$record['productId']."'>";
         echo $record['productName'];
         echo "</a> ";
-        echo $record['productDescription'] . " $" .  $record['price'] .   "<br>";
+        echo $record['productDescription'] . " $" .  $record['price'] .   "<br>";   
+        
     }
+
+
 }
 
 ?>
@@ -76,7 +84,6 @@ function filterProducts(){
     <head>
         <title> Lab 6: Ottermart Product Search</title>
     </head>
-
     <body>
         
         <h1> Ottermart </h1>
@@ -91,19 +98,23 @@ function filterProducts(){
                <option value=""> Select one </option>  
                <?=displayCategories()?>
             </select>
-            <br />
-            Price:From <input name ="priceFrom" type = "text" size = 2;> 
-            To: <input name ="priceTo" type="text" size =4>
-            <br />
-            Order result by:
-            <br />
-            <input type= "radio" name = "orderBy" value="productPrice">Price
-            <br />
-            <input type="radio" name ="orderBy" value="productName">Name
-            <br />
+            
+            Price: From: <input type="text" name="priceFrom"  /> 
+             To: <input type="text" name="priceTo"  />
+            <br>
+            Order By:
+            Price <input type="radio" name="orderBy" value="productPrice">
+            Name <input type="radio" name="orderBy" value="productName">
+            <br>
             <input type="submit" name="submit" value="Search!"/>
         </form>
-        <br />
+        <br>
+        <hr>
+        
         <?= filterProducts() ?>
         
+    
+
+
+    </body>
 </html>

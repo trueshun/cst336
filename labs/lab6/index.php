@@ -83,12 +83,13 @@ function filterProducts() {
 <html>
     <head>
         <title> Lab 6: Ottermart Product Search</title>
+        <link rel="stylesheet" href="css/styles.css" type="text/css" />
     </head>
     <body>
-        
-        <h1> Ottermart </h1>
-        <h2> Product Search </h2>
-        
+    <div class ="container">
+        <center><h1> Ottermart </h1></center>
+        <h2><center> Product Search </h2></center>
+        <center>
         <form>
             
             Product: <input type="text" name="productName" placeholder="Product keyword" /> <br />
@@ -108,6 +109,7 @@ function filterProducts() {
             <br>
             <input type="submit" name="submit" value="Search!"/>
         </form>
+        </center>
         <br>
         <hr>
         
@@ -115,6 +117,6 @@ function filterProducts() {
         
     
 
-
+    </div>
     </body>
 </html>

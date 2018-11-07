@@ -41,7 +41,7 @@
                 <nav class='navbar navbar-default - navbar-fixed-top'>
                     <div class='container-fluid'>
                         <div class='navbar-header'>
-                            <a class='navbar-brand' href='#'>Imagination Land</a>
+                            <a class='navbar-brand' href='#'>Fantasy Shop</a>
                         </div>
                         <ul class='nav navbar-nav'>
                             <li><a href='index.php'>Home</a></li>

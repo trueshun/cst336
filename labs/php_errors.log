@@ -1670,3 +1670,12 @@ Stack trace:
 #1 /home/ubuntu/workspace/cst336/labs/lab6/productInfo.php(55): displayProductInfo()
 #2 {main}
   thrown in /home/ubuntu/workspace/cst336/labs/lab6/productInfo.php on line 15
+[31-Oct-2018 21:32:14 UTC] PHP Fatal error:  Call to undefined function validateSessions() in /home/ubuntu/workspace/cst336/labs/lab7/deleteProduct.php on line 8
+[31-Oct-2018 21:32:14 UTC] PHP Stack trace:
+[31-Oct-2018 21:32:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/deleteProduct.php:0
+[31-Oct-2018 21:35:17 UTC] PHP Fatal error:  Call to undefined function validateSessions() in /home/ubuntu/workspace/cst336/labs/lab7/deleteProduct.php on line 8
+[31-Oct-2018 21:35:17 UTC] PHP Stack trace:
+[31-Oct-2018 21:35:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/deleteProduct.php:0
+[31-Oct-2018 21:36:27 UTC] PHP Fatal error:  Call to undefined function validateSessions() in /home/ubuntu/workspace/cst336/labs/lab7/deleteProduct.php on line 8
+[31-Oct-2018 21:36:27 UTC] PHP Stack trace:
+[31-Oct-2018 21:36:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/deleteProduct.php:0

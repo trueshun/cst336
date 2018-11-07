@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> JavaScript Review </title>
+        <!-- JavaScript code goes inside head tag. -->
+        
+        <!-- '?' mark means that the information went to the server
+             and that the page has been refeshed again. -->
+        <script>
+            function doMagic(){
+                //alert("hi");
+                document.getElementById("catImage").src = "img/now_you_dont.png";
+                getEl("catImage").src = "img/now_you_dont.png";
+                getEl("message").innerHTML = "... Now you <i>don't!</i>";
+                getEl("message").style.color = "teal";
+                getEl("doMagic").style.display = "none"; //hides button
+                getEl("reappear").style.display = "inline";
+                // document.getElementById("message").innerHTML = "... Now you <i>don't!</i>";
+                // document.getElementById("message").style.color = "teal";
+                // document.getElementById("doMagic").style.display = "none"; //hides button
+                // document.getElementById("reappear").style.display = "inline";
+            }
+            
+            function getEl(elementid){
+                return document.getElementById(elementid);
+            }
+            
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        
+        <style>
+            
+            #reappear {
+                display: none; /*hides an element */
+            }
+            
+        </style>
+    </head>
+    <body>
+
+        <img id="catImage"   src='img/now_you_see_me.png' />  
+        
+        <h2 id="message"> Now you see me... </h2>
+        
+        
+            
+        <button id="doMagic" onclick="doMagic()"> Do Magic! </button>
+        <button id="reappear" onclick="reappear()"> Reappear! </button>
+            
+        
+        <script>
+        
+          $("#doMagic").mouseover( function(){ doMagic(); } );
+        
+          $("#message").html("Changing content using jQuery!");
+        
+        </script>
+
+
+    </body>
+</html>

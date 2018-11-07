@@ -11,6 +11,7 @@ $password = sha1($_POST['password']);
 $sql = "SELECT * FROM om_admin
         WHERE username = '$username'
         AND password = '$password'";
+        
 $stmt = $dbConn ->prepare($sql);
 $stmt->execute();
 $record = $stmt->fetch(PDO::FETCH_ASSOC);//we're expecting just one password.

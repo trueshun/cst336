@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        
+        <script>
+            $(document).ready(function(){//$ means jQuery code
+                $('div[title*= "mainPar"]').css("color", "red");
+            });
+        </script>
+    </head>
+    <body>
+        <p id = "para1" class = "paraCl" title= "mainPar">
+            Holy shit, Ben!
+        </p>
+        
+        <script>
+            $('p[title*= "mainPar"]').css("color", "green");
+        </script>
+        
+        <div id ="para2" class = "paraCl2" title = "mainPar">
+            jfc, Rex
+        </div>
+    </body>
+</html>

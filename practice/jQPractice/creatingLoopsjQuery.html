@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        
+        <script>
+            $(document).ready(function(){//$ means jQuery code
+                //create an array object
+                var myObj = {first:1, second:2, third:3, forth:4};
+                
+                //refer to the name value paring in object
+                //i refers to first, second, third, forth
+                //val refers to 1, 2, 3, 4
+                //.each function has an incrementer - so you don't need to do that yourseldf.
+                //.each pulls the length value from object
+                //
+                $.each(myObj, function(i, val){
+                    //dynamicallt generate a refence to object
+                    $('#' + i).append('The value of ' + i + " is " + val);
+                });
+            });
+            
+        </script>
+    </head>
+    <body>
+        <div id = "first"></div>
+        <div id = "second"></div>
+        <div id = "third"></div>
+        <div id = "forth"></div>
+        
+    </body>
+</html>

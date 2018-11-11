@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        
+        <script>
+            $(document).ready(function(){//$ means jQuery code
+               // $("p").css("color", "red");//in between quotes write elememn that you are refrencing | selecting p tag in body
+                $("#para1").css("color", "red");
+                $(".paraCl2").css("color", "blue");
+            });//calling on css and the parameters are (the property we want, and the color/size)
+        </script>
+    </head>
+    <body>
+        <p id = "para1" class = "paraCl" onClick = "alert('hello there')">
+            Holy shit, Ben!
+        </p>
+        <p id ="para2" class = "paraCl2">
+            jfc, Rex
+        </p>
+    </body>
+</html>

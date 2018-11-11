@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        
+        <script>
+            $(document).ready(function(){//$ means jQuery code
+                //$('#para2').html('<h2>Hello this is new content.</h2>')//write new html content
+                $("#spoil").click(function(){
+                   $("#reveal").html("<h3>The Butler did it.</h3>");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p id = "para1" class = "paraCl">
+            "Why won't the light just shut up...? I swear I'll never drink again... someone please kill me..."
+            <br />
+            (Spoiler Alert! <a href = "#" id = "spoil"> Click Here</a> to reveal ending)
+            <div id = reveal></div>
+            Otherwise this would have been a great movie.
+        </p>
+    </body>
+</html>

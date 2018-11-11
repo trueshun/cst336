@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HW 4</title>
+        <!-- JavaScript -->
+        <script type = "text/javascript" src= "js/functions.js"> </script>
+        
+        <!-- jQuery -->
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){//$ means jQuery code
+                //jQuery code here
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Buckle up buckaroo, it's quiz time</h1>
+            
+            <form name = "myForm" action = "quiz_result.html" method = "post" onsubmit = "return vForm()">
+                                    <!-- question 1 -->
+                <or>
+                    <h2>1. What organization are Jessie and James part of? </h2>
+                    
+                    <div>
+                        <input type = "radio" name = "question1" id = "q1" value ="A">
+                        <label for = "question1">A. Team Magma</label>
+                    </div>
+                    
+                    <div>
+                        <input type= "radio" name = "question1" id = "q1" value="B">
+                        <label for = "question1">B. Team Rocket</label>
+                    </div>
+                    
+                    <div>
+                        <input type = "radio" name= "question1" id = "q1" value ="C">
+                        <label for ="question1">C. Team Aqua</label>
+                    </div>
+                    
+                    <div>
+                        <input type = "radio" name = "question1" id = "q1" value = "D">
+                        <label for ="question1">D. Team Skull</label>
+                    </div>
+                </or>
+                
+                                    <!-- Question 2 -->
+                <or>
+                    <h2>2. Are you a: </h2>
+                    <div>
+                        <input type ="radio" name = "question2" id = "q2" value="guy">
+                        <label for ="question2">Boy</label>
+                    </div>
+                    <div>
+                        <input type="radio" name = "question2" id = "q2" value ="chick">
+                        <label for="question2">Girl</label>
+                    </div>
+                </or>    
+                                    <!-- Question 3 -->
+                <or>
+                    <h2>3. Who is Ash's main pokemon?</h2>
+                    <div>
+                        <input type = "text" name = "question3" id ="q3" value = "" placeholder="Type here">
+                    </div>
+                </or>
+                
+                                    <!-- Question 4 -->
+                <or>
+                    <h2>4. Do you want a free point?</h2>
+                    <div>
+                        <input type ="checkbox" name = "question4" id = "q4" value ="yes" >
+                        <label for = "question4">YES!</label>
+                    </div>
+                </or>
+                                    <!-- Question 5--> 
+                <or>
+                    <h2>5.What's Professor Oak's grandson's name?</h2>
+                    <div>
+                        <input type="radio" name = "question5" id = "q5" value = "A">
+                        <label for="question5">Loser</label>
+                    </div>
+                    <div>
+                        <input type="radio" name = "question5" id = "q5" value = "B">
+                        <label for="question5">Smell ya later</label>
+                    </div>
+                    <div>
+                        <input type="radio" name = "question5" id = "q5" value = "C">
+                        <label for="question5">Gary</label>
+                    </div>
+                </or>
+                                    <!-- Question 6 -->
+                <or>
+                    <h2>6. Bye, bye </h2>
+                    <div>
+                        <select name = "question6" id ="q6">
+                            <option>Click on drop down list</option>
+                            <option value = "a">Pikachu!</option>
+                            <option value ="b">life!</option>
+                            <option value ="c">Butterfree!</option>
+                            <option value ="d">Misty!</option>
+                        </select>
+                    </div>
+                </or>
+                
+                <br />
+                <center><input type= "submit" name = "submit" value = "Submit quiz!"></center>
+                
+            </form>
+        </div>
+    </body>
+</html>

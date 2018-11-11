@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        
+        <script>
+            $(document).ready(function(){//$ means jQuery code
+               // $('[title*= "mainPar"]').css("color", "green");//how we want jQuery to find the title attribute that has a value of mainPar
+                $('div[title*= "mainPar"]').css("color", "green");
+            });//NOTE!! title#= NEEDS to have the equal touching the * or it won't work!
+        </script>
+    </head>
+    <body>
+        <p id = "para1" class = "paraCl" title= "mainPar">
+            Holy shit, Ben!
+        </p>
+        <div id ="para2" class = "paraCl2" title = "mainPar">
+            jfc, Rex
+        </div>
+    </body>
+</html>

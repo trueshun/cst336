@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        
+        <script>
+            $(document).ready(function(){//$ means jQuery code
+                $("#anc1").attr({
+                   //href: "http://www.google.com"//define attribute 
+                   href: "http://www.google.com",
+                   target: "_blank" //if you want to add an additional attribute
+                });//add attribute to anchor tag
+            });
+            
+        </script>
+    </head>
+    <body>
+        <p>
+            <a id = "anc1">
+                <img src = "img/button.png" id = "myImage" />
+            </a>
+        </p>
+        
+        <div id = "para2" class = "paracl2">
+            This weather man is predicting a 99% chance of shit storm and it's comin' right at ya!
+        </div>
+    </body>
+</html>

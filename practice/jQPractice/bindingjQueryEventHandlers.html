@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        
+        <script>
+            $(document).ready(function(){//$ means jQuery code
+                // $("#myImage").click(function(){//bind click event to element
+                //     $('#para2').hide();//run function whne clicked
+                // });
+                $("#myImage").mouseover(function(){//bind mouseover event to element
+                    $('#para2').hide();//run function whne clicked
+                });
+                
+                $("#myImage").mouseout(function(){//bind mouseout event to element
+                    $('#para2').show();//run function whne clicked
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p>
+            <img src = "img/button.png" id ="myImage" />
+        </p>
+        
+        <div id = "para2" class = "paraCl2">
+            "Am I Catholic or Protestant...? God, I don't know..."
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        
+        <script>
+            $(document).ready(function(){//$ means jQuery code
+                //$('div').hide();//refeernce element, div
+                $('#h1Hide').click(function()
+                    {
+                        $('div').toggle();//can use hide() or toggle() which will switch between showing and hiding.
+                    });
+            
+                $('#h1Show').click(function()
+                    {
+                        $('div').show();
+                    });
+            });
+        </script>
+    </head>
+    <body>
+        <h1 id = "h1Hide"> Click Here to hide the div paragraph!</h1>
+        
+        <p id = "para1" class = "paraCl">
+            HOLY SHIT, BEN!
+        </p>
+        
+        <div id = "para2" class ="paraCl2">
+            JFC, REX!
+        </div>
+        
+        <h1 id = "h1Show">Click here to show the div paragraph!</h1>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        
+        <script>
+            $(document).ready(function(){//$ means jQuery code
+                $("#myImage").on("click", function(event){//listeing for click event
+                   $("#para2").wrap("<h2></h2>")
+                });
+            });
+            
+        </script>
+    </head>
+    <body>
+        <p></p>
+            <img src = "img/button.png" id = "myImage" />
+        </p>
+        
+        <div id = "para2" class = "paraCl2">
+            This weather man is predicting a 99% chance of shit storm and it's comin' right at ya!
+        </div>
+    </body>
+</html>

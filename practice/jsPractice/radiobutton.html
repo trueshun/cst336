@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <script language = "javascript">
+        
+        function disTxt(){
+            var len = document.myForm.ans1.length;
+            
+            for(i = 0; i < len; i++){
+                if(document.myForm.ans1[i].checked){
+                    var rsvp = document.myForm.ans1[i].value;
+                    break;
+                }
+            }
+            alert("Your RSVP is: " + rsvp);
+        }
+        
+        </script>
+    </head>
+    
+    <body>  
+         <form name = "myForm" action = "" method = "post">
+             Will you be attending the event? <br />
+             Yes:<input type = "radio" name = "ans1" value ="Yes"> <br />
+             No: <input type = "radio" name = "ans1" value = "No"> <br />
+             Maybe: <input type = "radio" name ="ans1" value = "Maybe"> <br />
+            <input type = "button" value ="RSVP" onclick ="disTxt()"> 
+            <!-- button doesn't do anything unil onclick added to it. -->
+         </form>
+    </body>
+</html>

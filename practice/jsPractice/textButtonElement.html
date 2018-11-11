@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <script language = "javascript">
+        
+        function calNums(){
+            alert(Number(document.forms["myForm"]["iName"].value) + Number(document.forms["myForm"]["iName2"].value));
+        }
+        </script>
+    </head>
+    
+    <body>  
+         <form name = "myForm" action = "" method = "post">
+             Enter a number <input type ="text" name = "iName"> 
+             <br />
+             Enter another number: <input type = "text" name = "iName2">
+             <br />
+             <input type = "button" value = "Add Numbers" onClick = "calNums()"> <!-- button doesn't do anything unil onclick added to it. -->
+         </form>
+    </body>
+</html>

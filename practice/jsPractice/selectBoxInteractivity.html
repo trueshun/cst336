@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <script language = "javascript">
+        
+        function disTxt(){
+            var i = document.myForm.selRegion.selectedIndex;
+            alert(document.myForm.selRegion.options[i].text);//dynamically genertaed based on selection
+        }
+        
+        </script>
+    </head>
+    
+    <body>  
+         <form name = "myForm" action = "" method = "post">
+             Please Select Region <br />
+             <select name = "selRegion" size = "1">
+                 <option>Northeast</option>     <!-- become array starting at zero -->
+                 <option>Southeast</option>
+                 <option>Northwest</option>
+                 <option>Southwest</option>
+                 <option>West Central</option>
+                 <option>East Central</option>
+             </select>
+             <br />
+             <input type = "button" value = "Get Region" onClick = "disTxt()">
+            <!-- button doesn't do anything unil onclick added to it. -->
+         </form>
+    </body>
+</html>

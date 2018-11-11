@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <script language = "javascript">
+        
+        function disName(){
+            alert(document.forms["myForm"]["vname"].value);//[tell JS to look at form][reference element]
+        } 
+        </script>
+    </head>
+    
+    <body>  
+         <form name = "myForm" action = "" method = "post">
+             Give me a name: <input type ="text" name = "vname"> <br />
+             Give me another name: <input type = "text" name = "vname2">
+             <input type = "button" value = "CheckName">
+         </form>
+    </body>
+</html>

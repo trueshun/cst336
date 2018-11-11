@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <script language = "javascript">
+        
+        function disTxt(){
+            document.write(document.forms["myForm"]["myTa"].value);
+        }
+        </script>
+    </head>
+    
+    <body>  
+         <form name = "myForm" action = "" method = "post">
+             Enter some text here:<br /> 
+             <textarea name = "myTa"> </textarea>
+             <br />
+             <input type = "button" value = "Submit" onClick = disTxt()> <!-- button doesn't do anything unil onclick added to it. -->
+         </form>
+    </body>
+</html>

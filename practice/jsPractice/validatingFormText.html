@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <script language = "javascript">
+        
+        function vForm(){
+            if(document.myForm.thename.value == ""){
+                alert("You have not entered your name!");
+                return false;
+            }else if(document.myForm.email.value.indexOf("@") == -1){ //will return a value of -1 if it cannot find "@" symbol
+                alert("You have not entered a correct e-mail address.");
+                return false;
+            }else if(document.myForm.selRegion.selectedIndex == 0){
+                alert("You need to select a region.");
+                return false;
+            }else if(document.myForm.iterm.checked == false){
+                alert("You need to agree to the terms.")
+                return false;
+            }
+            else{
+                alert("The data looks good");
+            }
+        }
+        
+        </script>
+    </head>
+    
+    <body>  
+         <form name = "myForm" action = "hello.html" method = "post" onsubmit = "return vForm()">
+             Enter your name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <input type = "text" name = "thename" value = ""> <br /> <br />
+             
+             Enter your e-mail: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <input type = "text" name = "email" value = ""><br /> <br />
+             
+             Please Select Region: &nbsp;&nbsp;
+             <select name = "selRegion" size = "1">
+                 <option>Click on drop down list</option>
+                 <option>Northeast</option>     <!-- become array starting at zero -->
+                 <option>Southeast</option>
+                 <option>Northwest</option>
+                 <option>Southwest</option>
+                 <option>West Central</option>
+                 <option>East Central</option>
+             </select>
+             <br /> <br />
+             I agree to all shipping terms:<input type = "checkbox" name = "iterm" value = "agree"> <br /><br />
+             <input type = "submit" value = "Submit"> <input type = "reset" value = "Clear">
+         </form>
+    </body>
+</html>

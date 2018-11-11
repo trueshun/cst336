@@ -1,0 +1,7 @@
+[07-Nov-2018 22:15:29 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/projects/fantasyShop/dbConnectionFS.php:3) in /home/ubuntu/workspace/cst336/projects/fantasyShop/dbConnectionFS.php on line 3
+[07-Nov-2018 22:15:29 UTC] PHP Stack trace:
+[07-Nov-2018 22:15:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/fantasyShop/index.php:0
+[07-Nov-2018 22:15:29 UTC] PHP   2. include() /home/ubuntu/workspace/cst336/projects/fantasyShop/index.php:5
+[07-Nov-2018 22:15:55 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/projects/fantasyShop/dbConnectionFS.php:3) in /home/ubuntu/workspace/cst336/projects/fantasyShop/dbConnectionFS.php on line 3
+[07-Nov-2018 22:15:55 UTC] PHP Stack trace:
+[07-Nov-2018 22:15:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/fantasyShop/index.php:0

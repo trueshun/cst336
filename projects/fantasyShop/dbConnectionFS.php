@@ -1,9 +1,8 @@
 <?php
 
 function startConnection($dbname="fantasyShop") {
- //Creating database connection
+    //Creating database connection
     $host = "localhost";
-//  $dbname = "ottermart";
     $username = "root";
     $password = "";
     
@@ -21,5 +20,4 @@ function startConnection($dbname="fantasyShop") {
     
     return $dbConn;
 }
-?>
 ?>

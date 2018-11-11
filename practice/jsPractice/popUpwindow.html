@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <script language = "javascript">
+            function goPop(){
+                //window.open("http://google.com", "_blank") // openes up in new tab
+               //window.open("popUpWindow.html", "_blank");//infinate loop of pop up window, but popup blocker would prevent this.
+               window.open("http://google.com", "myWindow", "height = 200, width = 300, scrollbars= 1, resizable = 0, left = 5 ");//third paramater - specification paraameter
+            }
+            
+            function goPop2(){
+                window.open("http://www.bing.com", "myWindow2", "height = 300, width = 300, scrollbars = 1, resizable = 0, left = 5");
+            }
+        </script>
+    </head>
+    <!--<body onLoad = "goPop()">  //this causes a pop up window when loaded-->
+    <body>
+        <a href= "#" onClick= "goPop()"> Click here to popup window</a><br />
+        <a href = "#" onClick = "goPop2()"> Click here for another popup window.</a>
+    </body>
+</html>

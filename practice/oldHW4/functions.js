@@ -22,15 +22,21 @@ function vForm(){
     }
 }
 
-function results(){
+function qResult(){
     var totalCorrect = 0;
     
-    if(document.myForm.question1.value == "B"){
-        totalCorrect++;
-        
-    }
-    if(document.myForm.question2.value == "guy" || document.myForm.question2.value == "chick" ){
-        totalCorrect++;
-    }
+    if(document.getElementById("q1").value == "B"){
+        totalCorrect++;}
+    // }else if(document.myForm.question2.value == "guy" || document.myForm.question2.value == "chick" ){
+    //     totalCorrect++;
+    // }else if(document.myForm.question3.value == "pikachu" || document.myForm.question3.value == "Pikachu"){
+    //     totalCorrect++;
+    // }else if(document.myForm.question4.value == "yes"){
+    //     totalCorrect++;
+    // }else if(document.myForm.question5.value == "C"){
+    //     totalCorrect++;
+    // }else if(document.myForm.question6.selectedIndex == "c"){
+    //     totalCorrect++;
+    // }
     return totalCorrect;
 }

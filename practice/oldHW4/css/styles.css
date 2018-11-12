@@ -1,0 +1,11 @@
+.container{
+    margin:0 auto;
+	width:705px;
+	height:900px;
+    font-family: arial;
+    padding: 50px;
+    border: solid black 1px;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../img/bg.png");
+    opacity: .8;
+    border-radius: 10px;
+}

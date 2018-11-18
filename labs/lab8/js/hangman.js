@@ -1,16 +1,30 @@
 var selectedWord = "";
 var selectedHint = "";
-var board = "";
+var board = [];
 var remainingGuesses = 6;
 var showHint = false;
 var words = [{ word: "snake", hint: "It's a reptile" },
              { word: "monkey", hint: "It's a mammal" },
              { word: "beetle", hint: "It's an insect" }];
+             
 var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 
                 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 
                 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 //listeners
-startGame();
+window.onload= startGame();
+
+$(".hint").click(function(){
+   hideButton(); 
+});
+
+$(".replayBtn").on("click", function(){
+   location.reload(); 
+});
+
+$(".letter").click(function(){
+    checkLetter($(this).attr("id"));
+    disableButton($(this));
+});
 
 //functions
 function startGame() {
@@ -18,13 +32,6 @@ function startGame() {
     initBoard();
     createLetters();
     updateBoard();
-}
-
-//fill the board with underscores
-function initBoard() {
-    for (var letter in selectedWord) {
-        board += '_';
-    }
 }
 
 function pickWord() {
@@ -41,6 +48,15 @@ function createLetters(){
         $("#letters").append("<button class='letter' id='" + letter + "'>" + letter + "</button>");
     }
 }
+
+//fill the board with underscores
+function initBoard() {
+    for (var letter in selectedWord) {
+        //board += '_';
+        board.push("_");
+    }
+}
+
 
 //cheks to see if the selected letter exists in the selectedWord
 function checkLetter(letter){
@@ -73,15 +89,10 @@ function checkLetter(letter){
 //update the current word then calls for a board update
 function updateWord(positions, letter){
     for(var pos of positions){
-        //board[pos] = letter;
-        board = replaceAt(board, pos, letter);
+        board[pos] = letter;
     }
     
     updateBoard();
-}
-
-function replaceAt(str, index, value){
-    return str.substr(0, index) + value + str.substr(index + value.length);    
 }
 
 function updateBoard(){
@@ -122,15 +133,3 @@ function hideButton(){
     updateBoard();
 }
 
-$(".hint").click(function(){
-   hideButton(); 
-});
-
-$(".replayBtn").on("click", function(){
-   location.reload(); 
-});
-
-$(".letter").click(function(){
-    checkLetter($(this).attr("id"));
-    disableButton($(this));
-});

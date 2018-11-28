@@ -1679,3 +1679,10 @@ Stack trace:
 [31-Oct-2018 21:36:27 UTC] PHP Fatal error:  Call to undefined function validateSessions() in /home/ubuntu/workspace/cst336/labs/lab7/deleteProduct.php on line 8
 [31-Oct-2018 21:36:27 UTC] PHP Stack trace:
 [31-Oct-2018 21:36:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/deleteProduct.php:0
+[28-Nov-2018 21:59:34 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/cst336/labs/lab7/index.php on line 29
+[28-Nov-2018 22:00:04 UTC] PHP Warning:  include(functions.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/labs/lab7/index.php on line 3
+[28-Nov-2018 22:00:04 UTC] PHP Stack trace:
+[28-Nov-2018 22:00:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/index.php:0
+[28-Nov-2018 22:00:04 UTC] PHP Warning:  include(): Failed opening 'functions.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/labs/lab7/index.php on line 3
+[28-Nov-2018 22:00:04 UTC] PHP Stack trace:
+[28-Nov-2018 22:00:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/index.php:0

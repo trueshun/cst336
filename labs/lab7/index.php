@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Admin Login </title>
+        <title>-- Admin Login --</title>
     </head>
     <body>
         <h1>Ottermart - Admin Login</h1>
@@ -11,5 +11,6 @@
           Password:  <input type="password" name="password"/> <br>
           <input type="submit" value="Login">
         </form>
+        <br />
     </body>
 </html>

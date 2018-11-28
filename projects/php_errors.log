@@ -5,3 +5,12 @@
 [07-Nov-2018 22:15:55 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/projects/fantasyShop/dbConnectionFS.php:3) in /home/ubuntu/workspace/cst336/projects/fantasyShop/dbConnectionFS.php on line 3
 [07-Nov-2018 22:15:55 UTC] PHP Stack trace:
 [07-Nov-2018 22:15:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/fantasyShop/index.php:0
+[28-Nov-2018 03:19:13 UTC] PHP Fatal error:  Call to undefined function displayCategories() in /home/ubuntu/workspace/cst336/projects/witchMart/index.php on line 36
+[28-Nov-2018 03:19:13 UTC] PHP Stack trace:
+[28-Nov-2018 03:19:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/index.php:0
+[28-Nov-2018 03:20:42 UTC] PHP Fatal error:  Call to undefined function filterProducts() in /home/ubuntu/workspace/cst336/projects/witchMart/index.php on line 69
+[28-Nov-2018 03:20:42 UTC] PHP Stack trace:
+[28-Nov-2018 03:20:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/index.php:0
+[28-Nov-2018 03:23:10 UTC] PHP Fatal error:  Call to undefined function filterProducts() in /home/ubuntu/workspace/cst336/projects/witchMart/index.php on line 69
+[28-Nov-2018 03:23:10 UTC] PHP Stack trace:
+[28-Nov-2018 03:23:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/index.php:0

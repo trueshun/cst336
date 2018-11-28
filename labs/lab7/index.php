@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    include 'functions.php';
+    // filters and displays the products
+    
+    if (isset($_POST['itemName'])) {
+        $newItem = array();
+        $newItem['name'] = $_POST['itemName'];
+        $newItem['id'] = $_POST['itemId'];
+        $newItem['price'] = $_POST['itemPrice'];
+        $newItem['image'] = $_POST['itemImage'];
+        
+?>
+
 <!DOCTYPE html>
 <html>
     <head>

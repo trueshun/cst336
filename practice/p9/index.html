@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Lab 9</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <style>
+            body {
+                text-align: center;
+                font-size: 2em;
+            }
+        </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        
+        $("document").ready(function(){
+            $("#quantity1").change(function() {
+                var price = $("#price1").val();
+                var total = $("#quantity1").val();
+                total *= price;
+               $("#total1").innerHTML = '9';
+              
+            
+            });
+            
+            $("#quantity2").change(function () {
+                var price = $("#price2").val();
+                var total = $("#quantity2").val();
+                total *= price;
+               $("#total2").innerHTML = total;
+               
+            });
+        });
+    </script>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>Holiday Shopping</h1>
+        </div>
+        
+        <h1>Cart</h1>
+        <form>
+        <table class="table">
+            <thread>
+                <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thread>
+            <tbody>
+                <tr>
+                    <th scope="row">Fruitcake</th>
+                    <td><id="price1">$20</td>
+                    <td><input type="text" id="quantity1"></td>
+                    <td><span id="total1"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Pinata(Medium size)</th>
+                    <td><id="price2">$20</td>
+                    <td><input type="text" id="quantity2"></td>
+                    <td><span id="total2"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Shipping</th>
+                    <td></td>
+                    <td></td>
+                    <td>$5</td>
+                </tr>
+                <tr>
+                    <th scope="row">Subtotal</th>
+                    <td></td>
+                    <td></td>
+                    <td>$105</td>
+                </tr>
+                <tr>
+                    <th scope="row">Tax(10%)</th>
+                    <td></td>
+                    <td></td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <th scope="row">Total</th>
+                    <td></td>
+                    <td></td>
+                    <td>$116</td>
+                </tr>
+            </tbody>
+            
+        </table>
+        <input type="submit" value="CONFIRM PURCHASE!">
+        
+        </form>
+    </body>
+</html>

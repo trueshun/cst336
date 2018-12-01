@@ -6,6 +6,10 @@
     <title>AJAX: Sign Up Page</title>
 
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel='stylesheet' href='css/styles.css' type='text/css' />
+        
     <script>
         function validateForm() {
 
@@ -21,9 +25,13 @@
             if (password.length < 3) {
 
                 $("#passwordError").html("Error: Password not long enough, needs to be 3 characters long");
+                $("#passwordError").css("color", "red"); 
 
             }
-
+            if(password.length >= 3){
+                $("#passwordError").html("Password is appropriate length.");
+                $("#passwordError").css("color", "green");    
+            }
             if (password != passwordAgain) {
                 $("#passwordMismatch").html("Error: Passwords must match");
             }
@@ -44,11 +52,18 @@
                     dataType: "json",
                     data: { "zip": $("#zip").val() },
                     success: function(data, status) {
-
+                        if(data == false) {
+                               $("#zipError").html("Error: Zip code not found");
+                               $("#city").html("");
+                               $("#latitude").html("");
+                               $("#longitude").html("");
+                           } else {
+                               $("#invalidZip").html("");
+                               $("#city").html(data.city);
+                               $("#latitude").html(data.latitude);
+                               $("#longitude").html(data.longitude);
+                           }
                         //alert(data.city);
-                        $("#city").html(data.city);
-
-
                     },
                     complete: function(data, status) { //optional, used for debugging purposes
                         //alert(status);
@@ -119,33 +134,65 @@
         .error {
             color: red;
         }
+        #box{
+            text-align:center;
+            width:45%;
+        	height: 45%;
+        	margin: 0 auto;
+            background-color:white;
+            opacity:.9;
+            /*background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("img/bg3.jpg");*/
+            border:1px solid black;
+            border-radius: 25px;
+        }
+        body{
+            /*background-color:white;*/
+            background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("img/bg3.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
     </style>
 
 </head>
 
 <body>
+    <div id="box">
+        <h1> Sign Up Form </h1>
 
-    <h1> Sign Up Form </h1>
-
-    <form onsubmit="return validateForm()">
-        <fieldset>
-            <legend>Sign Up</legend>
-            First Name: <input type="text"><br> Last Name: <input type="text"><br> Email: <input type="text"><br> Phone Number:<input type="text"><br><br> Zip Code: <input type="text" id="zip"><br> City: <span id="city"></span>
-            <br> Latitude:
-            <br> Longitude:
-            <br><br> State:
-            <select id="state">
-                    <option value="">Select One</option>
-                    <option value="ca"> California</option>
-                    <option value="ny"> New York</option>
-                    <option value="tx"> Texas</option>
-                    <option value="va"> Virginia</option>
-                </select><br /> Select a County: <select id="county"></select><br> Desired Username: <input id="username" type="text"> <span id="usernameError" class="error"></span>
-            <br> Password: <input id="password" type="password"><span id="passwordError" class="error"></span><br> Type Password Again: <input id="passwordAgain" type="password"><span id="passwordMismatch" class="error"></span><br>
-
-            <input type="submit" value="Sign up!">
-        </fieldset>
-    </form>
+        <form onsubmit="return validateForm()">
+            <fieldset>
+                <legend>Sign Up</legend>
+                First Name: <input type="text">
+                <br /><br /> Last Name: <input type="text">
+                <br /><br /> Email: <input type="text">
+                <br /><br /> Phone Number:<input type="text">
+                <br />
+                <br /> Zip Code: <input type="text" id="zip"> 
+                <br /><span id="zipError" class="error"></span>
+                <br /> City: <span id="city"></span>
+                <br /> Latitude: <span id="latitude"></span>
+                <br /> Longitude:<span id="longitude"></span>
+                <br /><br /> State:
+                <select id="state">
+                        <option value="">Select One</option>
+                        <option value="ca"> California</option>
+                        <option value="ny"> New York</option>
+                        <option value="tx"> Texas</option>
+                        <option value="va"> Virginia</option>
+                </select>
+                <br /><br /> Select a County: <select id="county"></select>
+                <br /><br /> Desired Username: <input id="username" type="text"> 
+                <br /><span id="usernameError" class="error"></span>
+                <br /><br /> Password: <input id="password" type="password">
+                <br /><span id="passwordError" class="error"></span>
+                <br /><br /> Type Password Again: <input id="passwordAgain" type="password">
+                <br /><span id="passwordMismatch" class="error"></span><br>
+    
+                <!-- <input type="submit" value="Sign up!"> -->
+                <input class="btn btn-primary" type="submit" value="Sign up!">
+            </fieldset>
+        </form>
+    </div>
 
 </body>
 

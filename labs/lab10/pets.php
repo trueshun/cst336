@@ -28,6 +28,9 @@ function getAllPets(){
         <style>
             body {
                 text-align: center;
+                background-image:linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url("img/bg.png");
+                background-repeat: no-repeat;
+                background-size:cover;
             }
         </style>
    

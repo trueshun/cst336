@@ -1,13 +1,14 @@
 <?php
     session_start();
-    include 'functions.php';
-    // filters and displays the products
+    include 'inc/functions.php';
+    include 'dbConnection.php';
+    $dbConn = startConnection("witchmart");
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Wich Mart Index</title>
+        <title>Wich Mart - Index</title>
         
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css" />
@@ -20,17 +21,21 @@
         </script>
     </head>
     <body>
-        <!-- <div class="jumbotron"> -->
-            <h1 id="title">Witch Mart</h1>
-        <!-- </div> -->
+        <!-- navbar -->
         
-        <form action="adminloginpage.php">
-            <input type="submit" id="main_page_buttons" value="Admin Login" />
+        
+        <h1 id="title">Witch Mart</h1>
+        
+        <form method="post" action="loginProcess.php">
+            Username:  <input type="text" name="username"/> <br>
+            Password:  <input type="password" name="password"/> <br>
+            <input type="submit" value="Login">
         </form>
+        <br />
         
         <!-- post normal shop viewing if not logged in as admin here -->
         <form>
-            Product: <input type="text" name="productName" placeholder="Product keyword" class ="searchInputs"/> <br />
+            Product: <input type="text" name="productName" placeholder="Search Here" class ="searchInputs"/> <br />
             
             Category: 
             <select name="category" class ="searchInputs">
@@ -42,24 +47,19 @@
              To: <input type="number" name="priceTo" size="7" class ="searchInputs"/>
             <br>
             
-            Order Price By <br>
-              <input type="radio" name="orderBy" value="low-high"
-                <?php if ($_GET['orderBy'] == "ASC") {
-                //echo "checked";
-                } ?>
-                /> low-high <br>
-              <input type="radio" name="orderBy" value="high-low"
-                <?php if ($_GET['orderBy'] == "DECS") {
-                //echo "checked";
-                } ?>
-                /> high-low <br>
+            Order Price By: <br>
+                <input type="radio" name="orderBy" value="low-high">
+                low-high <br>
+                <input type="radio" name="orderBy" value="high-low"> 
+                high-low <br>
             <br>
-            Order Name By<br>
+            Order Name By: <br>
                 <input type = "radio" name = "orderBy" value ="az">A-Z
                 <input type = "radio" name = "orderBy" value ="za">Z-A
-               <br />
+                <br />
             <input id='search' type="submit" name="submit" value="Search!"/>
         </form>
+        
         <br>
         <hr>
         

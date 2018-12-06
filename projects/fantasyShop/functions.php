@@ -50,17 +50,17 @@
         
         
         if (isset($_GET['orderBy'])) {
-        if ($_GET['orderBy'] == "low-high") {
-            $sql .= " ORDER BY price ASC";
-        } else if ($_GET['orderBy'] == "high-low"){
-                
-                $sql .= " ORDER BY price DESC";
+            if ($_GET['orderBy'] == "low-high") {
+                $sql .= " ORDER BY price ASC";
+            } else if ($_GET['orderBy'] == "high-low"){
+                    
+            $sql .= " ORDER BY price DESC";
             }else if($_GET['orderBy'] == "az"){
                 $sql .= " ORDER BY productName ASC";
             }else{
                 $sql .= " ORDER BY productName DESC";
-            }
-    }
+            }   
+        }
     
         $stmt = $dbConn->prepare($sql);
         $stmt->execute($namedParameters);

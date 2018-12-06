@@ -2,7 +2,7 @@
     session_start();
     
     include 'dbConnection.php';
-    $dbConn = startConnection("witchmart");
+    $dbConn = startConnection($dbname="witchmart");
     
     //get userna,e and password
     $username = $_POST['username'];

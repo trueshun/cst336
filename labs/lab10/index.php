@@ -19,7 +19,10 @@
                  width:500px;
                  margin:0 auto; 
             }
-            
+            img{
+                height:400px;
+                width:425px;
+            }
         </style>
    
     </head>

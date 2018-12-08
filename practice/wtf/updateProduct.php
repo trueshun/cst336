@@ -2,7 +2,7 @@
 session_start();
 
 include '../../inc/dbConnection.php';
-$dbConn = startConnection("witchmart");
+$dbConn = startConnection("ottermart");
 include 'inc/functions.php';
 validateSession();
 
@@ -14,7 +14,7 @@ if (isset($_GET['updateProduct'])){  //user has submitted update form
     $catId =  $_GET['catId'];
     $image = $_GET['productImage'];
     
-    $sql = "UPDATE wm_product 
+    $sql = "UPDATE om_product 
             SET productName= :productName,
                productDescription = :productDescription,
                price = :price,
@@ -72,9 +72,6 @@ if (isset($_GET['productId'])) {
            Set Image Url: <input type="text" name="productImage" value="<?=$productInfo['productImage']?>"><br>
            <input type="submit" name="updateProduct" value="Update Product">
         </form>
-        
-        <br /> <br />
-        <a href="admin.php">Return to ADMIN page</a>
         
         
     </body>

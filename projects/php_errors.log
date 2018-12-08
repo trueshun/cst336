@@ -67,3 +67,271 @@ Stack trace:
 [01-Dec-2018 03:40:35 UTC] PHP Stack trace:
 [01-Dec-2018 03:40:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/index.php:0
 [01-Dec-2018 03:40:35 UTC] PHP   2. displayCategories() /home/ubuntu/workspace/cst336/projects/witchMart/index.php:41
+[06-Dec-2018 22:22:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ottermart.wm_product' doesn't exist' in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php:111
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php(111): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php(31): getProductInfo('27')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 111
+[06-Dec-2018 22:37:01 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ottermart.wm_product' doesn't exist' in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php:111
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php(111): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php(31): getProductInfo('27')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 111
+[06-Dec-2018 22:37:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ottermart.wm_product' doesn't exist' in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php:111
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php(111): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php(31): getProductInfo('27')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 111
+[06-Dec-2018 23:55:49 UTC] PHP Warning:  mysql_query() expects parameter 2 to be resource, object given in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 147
+[06-Dec-2018 23:55:49 UTC] PHP Stack trace:
+[06-Dec-2018 23:55:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[06-Dec-2018 23:55:49 UTC] PHP   2. avgPrice() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:59
+[06-Dec-2018 23:55:49 UTC] PHP   3. mysql_query() /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php:147
+[06-Dec-2018 23:59:50 UTC] PHP Warning:  mysql_query() expects parameter 2 to be resource, object given in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 149
+[06-Dec-2018 23:59:50 UTC] PHP Stack trace:
+[06-Dec-2018 23:59:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[06-Dec-2018 23:59:50 UTC] PHP   2. avgPrice() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:59
+[06-Dec-2018 23:59:50 UTC] PHP   3. mysql_query() /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php:149
+[06-Dec-2018 23:59:50 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 151
+[06-Dec-2018 23:59:50 UTC] PHP Stack trace:
+[06-Dec-2018 23:59:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[06-Dec-2018 23:59:50 UTC] PHP   2. avgPrice() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:59
+[06-Dec-2018 23:59:50 UTC] PHP   3. mysql_num_rows() /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php:151
+[06-Dec-2018 23:59:50 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 152
+[06-Dec-2018 23:59:50 UTC] PHP Stack trace:
+[06-Dec-2018 23:59:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[06-Dec-2018 23:59:50 UTC] PHP   2. avgPrice() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:59
+[06-Dec-2018 23:59:50 UTC] PHP   3. mysql_result() /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php:152
+[07-Dec-2018 00:26:41 UTC] PHP Fatal error:  Call to undefined function itemTotal() in /home/ubuntu/workspace/cst336/projects/witchMart/admin.php on line 60
+[07-Dec-2018 00:26:41 UTC] PHP Stack trace:
+[07-Dec-2018 00:26:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[07-Dec-2018 00:27:34 UTC] PHP Fatal error:  Call to undefined function itemTotal() in /home/ubuntu/workspace/cst336/projects/witchMart/admin.php on line 60
+[07-Dec-2018 00:27:34 UTC] PHP Stack trace:
+[07-Dec-2018 00:27:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[07-Dec-2018 02:00:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/cst336/projects/witchMart/index.php on line 71
+[07-Dec-2018 02:00:19 UTC] PHP Stack trace:
+[07-Dec-2018 02:00:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/index.php:0
+[07-Dec-2018 02:00:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/cst336/projects/witchMart/index.php on line 71
+[07-Dec-2018 02:00:26 UTC] PHP Stack trace:
+[07-Dec-2018 02:00:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/index.php:0
+[07-Dec-2018 02:00:30 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/cst336/projects/witchMart/index.php on line 71
+[07-Dec-2018 02:00:30 UTC] PHP Stack trace:
+[07-Dec-2018 02:00:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/index.php:0
+[07-Dec-2018 04:39:35 UTC] PHP Fatal error:  Call to undefined function avgPrice() in /home/ubuntu/workspace/cst336/projects/witchMart/admin.php on line 93
+[07-Dec-2018 04:39:35 UTC] PHP Stack trace:
+[07-Dec-2018 04:39:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[07-Dec-2018 04:42:24 UTC] PHP Fatal error:  Call to undefined function avgPrice() in /home/ubuntu/workspace/cst336/projects/witchMart/admin.php on line 93
+[07-Dec-2018 04:42:24 UTC] PHP Stack trace:
+[07-Dec-2018 04:42:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[07-Dec-2018 04:43:11 UTC] PHP Fatal error:  Call to undefined function avgPrice() in /home/ubuntu/workspace/cst336/projects/witchMart/admin.php on line 93
+[07-Dec-2018 04:43:11 UTC] PHP Stack trace:
+[07-Dec-2018 04:43:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[07-Dec-2018 04:43:12 UTC] PHP Fatal error:  Call to undefined function avgPrice() in /home/ubuntu/workspace/cst336/projects/witchMart/admin.php on line 93
+[07-Dec-2018 04:43:12 UTC] PHP Stack trace:
+[07-Dec-2018 04:43:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[07-Dec-2018 04:45:24 UTC] PHP Fatal error:  Call to undefined function avgPrice() in /home/ubuntu/workspace/cst336/projects/witchMart/admin.php on line 64
+[07-Dec-2018 04:45:24 UTC] PHP Stack trace:
+[07-Dec-2018 04:45:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[07-Dec-2018 04:45:25 UTC] PHP Fatal error:  Call to undefined function avgPrice() in /home/ubuntu/workspace/cst336/projects/witchMart/admin.php on line 64
+[07-Dec-2018 04:45:25 UTC] PHP Stack trace:
+[07-Dec-2018 04:45:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[07-Dec-2018 04:45:52 UTC] PHP Fatal error:  Call to undefined function avgPrice() in /home/ubuntu/workspace/cst336/projects/witchMart/admin.php on line 64
+[07-Dec-2018 04:45:52 UTC] PHP Stack trace:
+[07-Dec-2018 04:45:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[07-Dec-2018 04:46:36 UTC] PHP Fatal error:  Call to undefined function avgPrice() in /home/ubuntu/workspace/cst336/projects/witchMart/admin.php on line 65
+[07-Dec-2018 04:46:36 UTC] PHP Stack trace:
+[07-Dec-2018 04:46:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[07-Dec-2018 04:47:45 UTC] PHP Fatal error:  Call to undefined function avgPrice() in /home/ubuntu/workspace/cst336/projects/witchMart/admin.php on line 59
+[07-Dec-2018 04:47:45 UTC] PHP Stack trace:
+[07-Dec-2018 04:47:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[07-Dec-2018 07:49:41 UTC] PHP Fatal error:  Call to undefined function displayCartCount() in /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php on line 31
+[07-Dec-2018 07:49:41 UTC] PHP Stack trace:
+[07-Dec-2018 07:49:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 07:50:03 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 102
+[07-Dec-2018 07:50:03 UTC] PHP Stack trace:
+[07-Dec-2018 07:50:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 07:50:03 UTC] PHP   2. displayProductInfo() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:40
+[07-Dec-2018 07:50:07 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 102
+[07-Dec-2018 07:50:07 UTC] PHP Stack trace:
+[07-Dec-2018 07:50:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 07:50:07 UTC] PHP   2. displayProductInfo() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:40
+[07-Dec-2018 07:51:25 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4' in /home/ubuntu/workspace/cst336/projects/fantasyShop/functions.php:111
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/projects/fantasyShop/functions.php(111): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/projects/fantasyShop/purchaseHistory.php(40): displayProductInfo()
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/projects/fantasyShop/functions.php on line 111
+[07-Dec-2018 08:00:47 UTC] PHP Warning:  include(functions.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php on line 2
+[07-Dec-2018 08:00:47 UTC] PHP Stack trace:
+[07-Dec-2018 08:00:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 08:00:47 UTC] PHP Warning:  include(): Failed opening 'functions.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php on line 2
+[07-Dec-2018 08:00:47 UTC] PHP Stack trace:
+[07-Dec-2018 08:00:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 08:00:47 UTC] PHP Fatal error:  Call to undefined function displayProductInfo() in /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php on line 40
+[07-Dec-2018 08:00:47 UTC] PHP Stack trace:
+[07-Dec-2018 08:00:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 08:10:26 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 243
+[07-Dec-2018 08:10:26 UTC] PHP Stack trace:
+[07-Dec-2018 08:10:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/index.php:0
+[07-Dec-2018 08:10:58 UTC] PHP Warning:  include(functions.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php on line 2
+[07-Dec-2018 08:10:58 UTC] PHP Stack trace:
+[07-Dec-2018 08:10:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 08:10:58 UTC] PHP Warning:  include(): Failed opening 'functions.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php on line 2
+[07-Dec-2018 08:10:58 UTC] PHP Stack trace:
+[07-Dec-2018 08:10:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 08:10:58 UTC] PHP Fatal error:  Call to undefined function displayProductInfo() in /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php on line 37
+[07-Dec-2018 08:10:58 UTC] PHP Stack trace:
+[07-Dec-2018 08:10:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 08:11:27 UTC] PHP Warning:  include(functions.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php on line 2
+[07-Dec-2018 08:11:27 UTC] PHP Stack trace:
+[07-Dec-2018 08:11:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 08:11:27 UTC] PHP Warning:  include(): Failed opening 'functions.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php on line 2
+[07-Dec-2018 08:11:27 UTC] PHP Stack trace:
+[07-Dec-2018 08:11:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 08:11:27 UTC] PHP Fatal error:  Call to undefined function displayProductInfo() in /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php on line 27
+[07-Dec-2018 08:11:27 UTC] PHP Stack trace:
+[07-Dec-2018 08:11:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 08:12:27 UTC] PHP Warning:  include(functions.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php on line 2
+[07-Dec-2018 08:12:27 UTC] PHP Stack trace:
+[07-Dec-2018 08:12:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 08:12:27 UTC] PHP Warning:  include(): Failed opening 'functions.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php on line 2
+[07-Dec-2018 08:12:27 UTC] PHP Stack trace:
+[07-Dec-2018 08:12:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 08:12:27 UTC] PHP Fatal error:  Call to undefined function displayProductInfo() in /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php on line 25
+[07-Dec-2018 08:12:27 UTC] PHP Stack trace:
+[07-Dec-2018 08:12:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 08:13:03 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 114
+[07-Dec-2018 08:13:03 UTC] PHP Stack trace:
+[07-Dec-2018 08:13:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 08:13:03 UTC] PHP   2. displayProductInfo() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:25
+[07-Dec-2018 08:14:49 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 116
+[07-Dec-2018 08:14:49 UTC] PHP Stack trace:
+[07-Dec-2018 08:14:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 08:14:49 UTC] PHP   2. displayProductInfo() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:25
+[07-Dec-2018 08:16:22 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/projects/witchMart/dbConnection.php:2) in /home/ubuntu/workspace/cst336/projects/witchMart/dbConnection.php on line 2
+[07-Dec-2018 08:16:22 UTC] PHP Stack trace:
+[07-Dec-2018 08:16:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/index.php:0
+[07-Dec-2018 08:18:07 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/projects/witchMart/dbConnection.php:2) in /home/ubuntu/workspace/cst336/projects/witchMart/dbConnection.php on line 2
+[07-Dec-2018 08:18:07 UTC] PHP Stack trace:
+[07-Dec-2018 08:18:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/index.php:0
+[07-Dec-2018 08:18:10 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/projects/witchMart/dbConnection.php:2) in /home/ubuntu/workspace/cst336/projects/witchMart/dbConnection.php on line 2
+[07-Dec-2018 08:18:10 UTC] PHP Stack trace:
+[07-Dec-2018 08:18:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/index.php:0
+[07-Dec-2018 08:18:15 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/projects/witchMart/dbConnection.php:2) in /home/ubuntu/workspace/cst336/projects/witchMart/dbConnection.php on line 2
+[07-Dec-2018 08:18:15 UTC] PHP Stack trace:
+[07-Dec-2018 08:18:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/index.php:0
+[07-Dec-2018 08:20:03 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/projects/witchMart/dbConnection.php:2) in /home/ubuntu/workspace/cst336/projects/witchMart/dbConnection.php on line 2
+[07-Dec-2018 08:20:03 UTC] PHP Stack trace:
+[07-Dec-2018 08:20:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/index.php:0
+[07-Dec-2018 08:20:15 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/projects/witchMart/dbConnection.php:2) in /home/ubuntu/workspace/cst336/projects/witchMart/dbConnection.php on line 2
+[07-Dec-2018 08:20:15 UTC] PHP Stack trace:
+[07-Dec-2018 08:20:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/index.php:0
+[07-Dec-2018 08:20:41 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 118
+[07-Dec-2018 08:20:41 UTC] PHP Stack trace:
+[07-Dec-2018 08:20:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 08:20:41 UTC] PHP   2. displayProductInfo() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:26
+[07-Dec-2018 08:23:08 UTC] PHP Fatal error:  Call to undefined function displayProductInfo() in /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php on line 26
+[07-Dec-2018 08:23:08 UTC] PHP Stack trace:
+[07-Dec-2018 08:23:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 21:25:53 UTC] PHP Fatal error:  Call to undefined function displayProductInfo() in /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php on line 26
+[07-Dec-2018 21:25:53 UTC] PHP Stack trace:
+[07-Dec-2018 21:25:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 21:26:03 UTC] PHP Fatal error:  Call to undefined function displayProductInfo() in /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php on line 26
+[07-Dec-2018 21:26:03 UTC] PHP Stack trace:
+[07-Dec-2018 21:26:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 22:04:42 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 168
+[07-Dec-2018 22:04:43 UTC] PHP Stack trace:
+[07-Dec-2018 22:04:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 22:04:43 UTC] PHP   2. displayProductInfo() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:22
+[07-Dec-2018 22:05:24 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 168
+[07-Dec-2018 22:05:24 UTC] PHP Stack trace:
+[07-Dec-2018 22:05:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 22:05:24 UTC] PHP   2. displayProductInfo() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:22
+[07-Dec-2018 22:05:25 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 168
+[07-Dec-2018 22:05:25 UTC] PHP Stack trace:
+[07-Dec-2018 22:05:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:0
+[07-Dec-2018 22:05:25 UTC] PHP   2. displayProductInfo() /home/ubuntu/workspace/cst336/projects/witchMart/purchaseHistory.php:22
+[07-Dec-2018 22:39:44 UTC] PHP Warning:  Illegal string offset 'productName' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 36
+[07-Dec-2018 22:39:44 UTC] PHP Stack trace:
+[07-Dec-2018 22:39:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:39:44 UTC] PHP Warning:  Illegal string offset 'productDescription' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 37
+[07-Dec-2018 22:39:44 UTC] PHP Stack trace:
+[07-Dec-2018 22:39:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:39:44 UTC] PHP Warning:  Illegal string offset 'productImage' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 38
+[07-Dec-2018 22:39:44 UTC] PHP Stack trace:
+[07-Dec-2018 22:39:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:39:45 UTC] PHP Warning:  Illegal string offset 'productName' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 36
+[07-Dec-2018 22:39:45 UTC] PHP Stack trace:
+[07-Dec-2018 22:39:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:39:45 UTC] PHP Warning:  Illegal string offset 'productDescription' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 37
+[07-Dec-2018 22:39:45 UTC] PHP Stack trace:
+[07-Dec-2018 22:39:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:39:45 UTC] PHP Warning:  Illegal string offset 'productImage' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 38
+[07-Dec-2018 22:39:45 UTC] PHP Stack trace:
+[07-Dec-2018 22:39:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:39:59 UTC] PHP Warning:  Illegal string offset 'productName' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 36
+[07-Dec-2018 22:39:59 UTC] PHP Stack trace:
+[07-Dec-2018 22:39:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:39:59 UTC] PHP Warning:  Illegal string offset 'productDescription' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 37
+[07-Dec-2018 22:39:59 UTC] PHP Stack trace:
+[07-Dec-2018 22:39:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:39:59 UTC] PHP Warning:  Illegal string offset 'productImage' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 38
+[07-Dec-2018 22:39:59 UTC] PHP Stack trace:
+[07-Dec-2018 22:39:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:39:59 UTC] PHP Warning:  Illegal string offset 'productName' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 36
+[07-Dec-2018 22:39:59 UTC] PHP Stack trace:
+[07-Dec-2018 22:39:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:39:59 UTC] PHP Warning:  Illegal string offset 'productDescription' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 37
+[07-Dec-2018 22:39:59 UTC] PHP Stack trace:
+[07-Dec-2018 22:39:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:39:59 UTC] PHP Warning:  Illegal string offset 'productImage' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 38
+[07-Dec-2018 22:39:59 UTC] PHP Stack trace:
+[07-Dec-2018 22:39:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:41:37 UTC] PHP Warning:  Illegal string offset 'productName' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 36
+[07-Dec-2018 22:41:37 UTC] PHP Stack trace:
+[07-Dec-2018 22:41:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:41:37 UTC] PHP Warning:  Illegal string offset 'productDescription' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 37
+[07-Dec-2018 22:41:37 UTC] PHP Stack trace:
+[07-Dec-2018 22:41:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:41:37 UTC] PHP Warning:  Illegal string offset 'productImage' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 38
+[07-Dec-2018 22:41:37 UTC] PHP Stack trace:
+[07-Dec-2018 22:41:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:41:37 UTC] PHP Warning:  Illegal string offset 'productName' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 36
+[07-Dec-2018 22:41:37 UTC] PHP Stack trace:
+[07-Dec-2018 22:41:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:41:37 UTC] PHP Warning:  Illegal string offset 'productDescription' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 37
+[07-Dec-2018 22:41:37 UTC] PHP Stack trace:
+[07-Dec-2018 22:41:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:41:37 UTC] PHP Warning:  Illegal string offset 'productImage' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 38
+[07-Dec-2018 22:41:37 UTC] PHP Stack trace:
+[07-Dec-2018 22:41:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:41:40 UTC] PHP Warning:  Illegal string offset 'productName' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 36
+[07-Dec-2018 22:41:40 UTC] PHP Stack trace:
+[07-Dec-2018 22:41:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:41:40 UTC] PHP Warning:  Illegal string offset 'productDescription' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 37
+[07-Dec-2018 22:41:40 UTC] PHP Stack trace:
+[07-Dec-2018 22:41:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:41:40 UTC] PHP Warning:  Illegal string offset 'productImage' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 38
+[07-Dec-2018 22:41:40 UTC] PHP Stack trace:
+[07-Dec-2018 22:41:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:41:41 UTC] PHP Warning:  Illegal string offset 'productName' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 36
+[07-Dec-2018 22:41:41 UTC] PHP Stack trace:
+[07-Dec-2018 22:41:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:41:41 UTC] PHP Warning:  Illegal string offset 'productDescription' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 37
+[07-Dec-2018 22:41:41 UTC] PHP Stack trace:
+[07-Dec-2018 22:41:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:41:41 UTC] PHP Warning:  Illegal string offset 'productImage' in /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php on line 38
+[07-Dec-2018 22:41:41 UTC] PHP Stack trace:
+[07-Dec-2018 22:41:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/productInfo.php:0
+[07-Dec-2018 22:52:06 UTC] PHP Fatal error:  Cannot redeclare startConnection() (previously declared in /home/ubuntu/workspace/cst336/projects/witchMart/dbConnection.php:2) in /home/ubuntu/workspace/cst336/projects/witchMart/dbConnection.php on line 2
+[07-Dec-2018 22:52:06 UTC] PHP Stack trace:
+[07-Dec-2018 22:52:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/index.php:0
+[08-Dec-2018 05:55:57 UTC] PHP Warning:  include(headerAdmin.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/projects/witchMart/admin.php on line 57
+[08-Dec-2018 05:55:57 UTC] PHP Stack trace:
+[08-Dec-2018 05:55:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[08-Dec-2018 05:55:57 UTC] PHP Warning:  include(): Failed opening 'headerAdmin.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/projects/witchMart/admin.php on line 57
+[08-Dec-2018 05:55:57 UTC] PHP Stack trace:
+[08-Dec-2018 05:55:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0

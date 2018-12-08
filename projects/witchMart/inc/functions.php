@@ -78,17 +78,34 @@
     //print_r($records);
     
     
-    foreach ($records as $record) {
+        echo "<table width='100' class='table table-striped table-dark'>";
+        foreach ($records as $record) {
+            
+            echo "<tr>";
+            echo "<td><img src='" . $record['productImage'] . "'  width='100px'></td>";
+            //echo "<td><h2><a href='purchaseHistory.php?productId=".$record['productId']."'>";
+            //echo "<td><h2>".$record['productId'];
+            echo "<td><h2>".$record['productName']. "<h2></td>";
+            //echo "<td><h4>".$record['productDescription']. "<h4></td>";
+            echo "<td><h2>Price: $" .$record['price']. "</h2></td>";
+            
+            echo "<td><form method ='post'>";
+            echo "<input type='hidden' name = itemName value='". $record['productName'] ."'>";
+            echo "<input type='hidden' name = itemPrice value='". $record['price'] ."'>";
+            echo "<input type='hidden' name = itemImage value='". $record['productImage'] ."'>";
+            echo "<input type='hidden' name = itemId value='". $record['productId'] ."'>";
+            echo "</form></td>";
+            
+            
+            echo "</tr>";
+            
+        }
         
-        echo "<a href='productInfo.php?productId=".$record['productId']."'>";
-        echo $record['productName'];
-        echo "</a> ";
-        //echo $record['productDescription'] . " $" .  $record['price'] .   "<br>";  
-        echo $record['price'] . "<br />";
-    }
-
+        echo "</table>";
 
 }
+
+    
  
     function getCategories() {
         global $dbConn;
@@ -109,7 +126,7 @@
         $sql = "SELECT * FROM wm_product WHERE productId = $productId";
         $stmt = $dbConn->prepare($sql);
         $stmt->execute();
-        $record = $stmt->fetch(PDO::FETCH_ASSOC); //we're expecting multiple records   
+        $record = $stmt->fetch(PDO::FETCH_ASSOC);   
         
         return $record;
     }   
@@ -138,4 +155,48 @@
             
         }
     }
+    
+    // function avgPrice(){
+    //     global $dbConn;
+        
+    //     $sql = "SELECT AVG(price) 
+    //             AS AveragePrice
+    //             FROM wm_product";
+
+    //     $stmt = $dbConn->prepare($sql);
+    //     $stmt->execute();
+    //     $record = $stmt->fetch(PDO::FETCH_ASSOC);   
+        
+    //     echo "The average price of all the items in the database is ". $record['AveragePrice']. ".";
+    // }
+    
+    // function itemCount(){
+    //     global $dbConn;
+        
+    //     $sql = "SELECT COUNT(productId) 
+    //             AS CountTotal
+    //             FROM wm_product";
+                
+    //     $stmt = $dbConn->prepare($sql);
+    //     $stmt->execute();
+    //     $record = $stmt->fetch(PDO::FETCH_ASSOC);   
+        
+    //     //echo $record['CountTotal'];
+    //     echo 'There are ' .$record['CountTotal']. ' items in the database.';
+    // }
+    
+    // function maxPrice(){
+    //     global $dbConn;
+        
+    //     $sql = "SELECT max(productName) as MaxName,
+    //             MAX(price) as MaxPrice 
+    //             FROM wm_product";
+                
+    //     $stmt = $dbConn->prepare($sql);
+    //     $stmt->execute();
+    //     $record = $stmt->fetch(PDO::FETCH_ASSOC);   
+        
+    //     echo 'The most expensive item is ' .$record['MaxName']. ', which cost '.$record['MaxPrice']. '.';
+    // }
+    
 ?>

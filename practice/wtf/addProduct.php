@@ -1,7 +1,8 @@
 <?php
+session_start();
 
-include 'dbConnection.php';
-$dbConn = startConnection("witchmart");
+include '../../inc/dbConnection.php';
+$dbConn = startConnection("ottermart");
 include 'inc/functions.php';
 validateSession();
 
@@ -14,7 +15,7 @@ if (isset($_GET['addProduct'])) { //checks whether the form was submitted
     $image = $_GET['productImage'];
     
     
-    $sql = "INSERT INTO wm_product (productName, productDescription, productImage,price, catId) 
+    $sql = "INSERT INTO om_product (productName, productDescription, productImage,price, catId) 
             VALUES (:productName, :productDescription, :productImage, :price, :catId);";
     $np = array();
     $np[":productName"] = $productName;
@@ -61,9 +62,6 @@ if (isset($_GET['addProduct'])) { //checks whether the form was submitted
            Set Image Url: <input type="text" name="productImage"><br>
            <input type="submit" name="addProduct" value="Add Product">
         </form>
-        
-        <br /><br />
-        <a href="admin.php">Return to ADMIN page</a>
 
     </body>
 </html>

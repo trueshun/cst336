@@ -1,0 +1,25 @@
+  body{
+    background-color:#212529;
+    color: white;
+  }
+  .jumbotron{
+    background-color: #2C3034;
+    /*background-image:linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.2)), url("../img/jumboBg.jpg");
+    background-size:cover;*/
+    background-image: url("../img/jbImage.png");
+    color:white;
+  }
+  .box{
+    /*border: solid white .1px;*/
+    margin-left: 550px;
+    margin-right: 550px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 15px;
+    border-style: inset;
+    background-color: #2C3034;
+    color:white;
+    /*background-image:linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.2)), url("../img/jumboBg.jpg");
+    background-size: cover;*/
+  }
+  

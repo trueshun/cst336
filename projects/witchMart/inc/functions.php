@@ -141,7 +141,7 @@
     
         foreach ($records as $record) {
             
-            echo "<a class='btn btn-primary' role='button' href='updateProduct.php?productId=".$record['productId']."'>Update</a>";
+            echo "<a class='btn btn-outline-dark' role='button' href='updateProduct.php?productId=".$record['productId']."'>Update</a>";
             //echo "[<a href='deleteProduct.php?productId=".$record['productId']."'>Delete</a>]";
             echo "<form action='deleteProduct.php' onsubmit='return confirmDelete()'>";
             echo "<input type='hidden' name='productId' value='".$record['productId']."'>";

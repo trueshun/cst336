@@ -19,7 +19,9 @@ validateSession();
             form {
                 display: inline-block;
             }
-            
+            .jumbotron{
+                text-align:center;
+            }
             /*#container{*/
             /*    text-align:center;*/
             /*    margin:0 auto;*/
@@ -31,8 +33,9 @@ validateSession();
             /*    color:black;*/
             /*}*/
         </style>
+        <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/coreui-icons.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css" />
-        <!--<link rel="stylesheet" href="css/styles.css" type="text/css" />-->
+        <link rel="stylesheet" href="css/admins.css" type="text/css" />
         <script>
         
             function confirmDelete() {
@@ -53,52 +56,66 @@ validateSession();
     
     </head>
     <body>
-    <div id="container">
-        <h1> ADMIN SECTION - Witch Mart </h1>
+    <div class="jumbotron">
+        <h1> ADMIN SECTION - Hogwarts Express</h1>
+    </div>
+    
+    <!-- fist container that will center it -->
+    <div class="container">
         
+        <!-- div for admin box -->
+        
+        <div class="admin">
          <h3>Welcome <?= $_SESSION['adminFullName'] ?> </h3>
 
           <form action="addProduct.php">
-              <input type="submit" value="Add New Product">
+              <input type="submit" class="btn btn-outline-dark" value="Add New Product">
           </form>
          <form action="logout.php">
-              <input type="submit" value="Logout">
+              <input type="submit" class="btn btn-outline-dark" value="Logout">
           </form>
-
+        </div>
+        
+        <!-- div for reports -->
            <br><br>
+        <div class="reportBox">
            <h2>Generate Reports</h2>
         <div id="reports">
-            <input type="button" onclick="reportClick('avg')" id="avg" value="Average Price">
-            <input type="button" onclick="reportClick('itemTotal')" id="itemTotal" value="Total number of items in database">
-            <input type="button" onclick="reportClick('maxPrice')" id="maxPrice" value="Most expensive item in the database">
+            <input type="button" class="btn btn-outline-dark btn-md" onclick="reportClick('avg')" id="avg" value="Average Price">
+            <input type="button" class="btn btn-outline-dark btn-md" onclick="reportClick('itemTotal')" id="itemTotal" value="Total number of items in database">
+            <input type="button" class="btn btn-outline-dark btn-md" onclick="reportClick('maxPrice')" id="maxPrice" value="Most expensive item in the database">
         </div>
         <div id="result"></div>
-        
+        </div> <!-- reportBox close -->
         <br /><br />
         
+        <!--div for items in database -->
+        <div class="listBox">
         <?= displayAllProducts() ?>
         
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Product Info</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <iframe name="productModal" width="450" height="250"></iframe>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>        
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Product Info</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <iframe name="productModal" width="450" height="250"></iframe>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>        
         
+        </div><!--listBox end -->
+    </div><!-- container end -->
         <script>
         
            function reportClick(token){
@@ -132,6 +149,6 @@ validateSession();
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-        </div>
+       
     </body>
 </html>

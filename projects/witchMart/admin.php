@@ -125,7 +125,7 @@ validateSession();
                             $("#result").append("<h3>The total number of items in the database is " + data.CountTotal + ".</h3>");
                         }
                         if(token == "maxPrice"){
-                            $("#result").append("<h3>The most expensive item in the database is " + data.MaxName + " and it cost " + data.MaxPrice + " dollars. </h3>");
+                            $("#result").append("<h3>The most expensive item in the database cost " + data.MaxPrice + " dollars. </h3>");
                         }
                    },
                    complete:function(data, status){//optional, used for debugging purposes

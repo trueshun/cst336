@@ -14,8 +14,7 @@
                 FROM wm_product";
     }
     if($_GET['id'] == "maxPrice"){
-        $sql = "SELECT max(productName) as MaxName,
-                MAX(price) as MaxPrice 
+        $sql = "SELECT MAX(price)as MaxPrice 
                 FROM wm_product";
     }
     

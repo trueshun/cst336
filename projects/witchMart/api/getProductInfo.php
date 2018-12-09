@@ -2,7 +2,7 @@
     include '../dbConnection.php';
     $dbConn = startConnection("witchmart");
     
-    $sql = "SELECT * FROM wm_product WHERE productId = ".$_GET['productnum'];
+    $sql = "SELECT * FROM wm_product WHERE productId = ".$_GET['productid'];
             
     $stmt = $dbConn->prepare($sql);
     $stmt->execute();

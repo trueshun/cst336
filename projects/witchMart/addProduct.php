@@ -34,36 +34,47 @@ if (isset($_GET['addProduct'])) { //checks whether the form was submitted
 <html>
     <head>
         <title> Admin Section: Add New Product </title>
+        <!-- bootstrap link -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css" />
+        <!-- css -->
+        <link rel="stylesheet" href="css/add.css" type="text/css" />
     </head>
     <body>
+        <?php
+            include "inc/adminHeader.php";
+        ?>
+    <div class="outerBox">    
+        <div class="nameBox">
+            <h1> Adding New Product </h1>
+        </div>
         
-        <h1> Adding New Product </h1>
-        
-        <form>
-           Product name: <input type="text" name="productName"><br>
-           Description: <textarea name="description" cols="50" rows="4"></textarea><br>
-           Price: <input type="text" name="price"><br>
-           Category: 
-           <select name="catId">
-              <option value="">Select One</option>
-              <?php
-              
-              $categories = getCategories();
-              
-              foreach ($categories as $category) {
+        <div class="titleBox">
+            <form>
+               Product name: <input type="text" name="productName"><br>
+               Description: <textarea name="description" cols="50" rows="4"></textarea><br>
+               Price: <input type="text" name="price"><br>
+               Category: 
+               <select name="catId">
+                  <option value="">Select One</option>
+                  <?php
                   
-                  echo "<option value='".$category['catId']."'>" . $category['catName'] . "</option>";
+                  $categories = getCategories();
                   
-              }
-              
-              ?>
-           </select> <br />
-           Set Image Url: <input type="text" name="productImage"><br>
-           <input type="submit" name="addProduct" value="Add Product">
-        </form>
+                  foreach ($categories as $category) {
+                      echo "<option value='".$category['catId']."'>" . $category['catName'] . "</option>";
+                  }
+                  
+                  ?>
+               </select> <br />
+               Set Image Url: <input type="text" name="productImage"><br><br />
+               <center><input type="submit" name="addProduct" class="btn btn-outline-dark" value="Add Product"></center>
+            </form>
+        </div><!--titleBox close -->
         
-        <br /><br />
-        <a href="admin.php">Return to ADMIN page</a>
-
+            <br /><br />
+            <div class="returnBox">
+                <a href="admin.php" class="btn btn-outline-dark">Return to ADMIN page</a>
+            </div><!--returnBox close -->
+    </div><!-- outerBox close -->
     </body>
 </html>

@@ -7,7 +7,12 @@ include 'inc/functions.php';
 validateSession();
 
 
-if (isset($_GET['updateProduct'])){  //user has submitted update form
+if (isset($_GET['productId'])) {
+  $productInfo = getProductInfo($_GET['productId']);
+ // print_r($productInfo);
+}
+//function updateItems() {
+    if (isset($_GET['updateProduct'])){  //user has submitted update form
     $productName = $_GET['productName'];
     $description = $_GET['description'];
     $price =  $_GET['price'];
@@ -22,16 +27,18 @@ if (isset($_GET['updateProduct'])){  //user has submitted update form
                productImage = :productImage
             WHERE productId = " . $_GET['productId'];
          
+    $np = array();
+    $np[":productName"] = $productName;
+    $np[":productDescription"] = $description;
+    $np[":productImage"] = $image;
+    $np[":price"] = $price;
+    $np[":catId"] = $catId;
     
-}
+    $stmt = $dbConn->prepare($sql);
+    $stmt->execute($np);
 
 
-if (isset($_GET['productId'])) {
-
-  $productInfo = getProductInfo($_GET['productId']);    
-  
- // print_r($productInfo);
-    
+    echo"<h4><b>Product has been updated. Refresh page to see changes.</b></h4>";
     
 }
 
@@ -42,11 +49,20 @@ if (isset($_GET['productId'])) {
 <html>
     <head>
         <title> Update Products! </title>
+        <!-- bootstrap link -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css" />
+        <!-- css -->
+        <link rel="stylesheet" href="css/update.css" type="text/css" />
     </head>
     <body>
-
-        <h1> Updating a Product </h1>
-        
+        <?php
+            include "inc/adminHeader.php";
+        ?>
+        <div class="outerBox">
+        <div class="nameBox"> 
+            <h1> Updating A Product </h1>
+        </div>   
+        <div class="titleBox">
         <form>
             <input type="hidden" name="productId" value="<?=$productInfo['productId']?>">
            Product name: <input type="text" name="productName" value="<?=$productInfo['productName']?>"><br>
@@ -69,13 +85,14 @@ if (isset($_GET['productId'])) {
               
               ?>
            </select> <br />
-           Set Image Url: <input type="text" name="productImage" value="<?=$productInfo['productImage']?>"><br>
-           <input type="submit" name="updateProduct" value="Update Product">
+           Set Image Url: <input type="text" name="productImage" value="<?=$productInfo['productImage']?>"><br /><br />
+           <center><input type="submit" name="updateProduct" class="btn btn-outline-dark" value="Update Product"></center>
         </form>
-        
+        </div><!-- outerBox end -->
         <br /> <br />
-        <a href="admin.php">Return to ADMIN page</a>
-        
+        <div class="returnBox">
+            <a href="admin.php" class="btn btn-outline-dark" >Return to ADMIN page</a>
+        </div><!-- returnBox close -->
         
     </body>
 </html>

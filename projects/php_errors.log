@@ -335,3 +335,31 @@ Stack trace:
 [08-Dec-2018 05:55:57 UTC] PHP Warning:  include(): Failed opening 'headerAdmin.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/projects/witchMart/admin.php on line 57
 [08-Dec-2018 05:55:57 UTC] PHP Stack trace:
 [08-Dec-2018 05:55:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/admin.php:0
+[09-Dec-2018 07:22:18 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php on line 41
+[09-Dec-2018 07:22:41 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'witchmart.om_product' doesn't exist' in /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php:38
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php(38): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php on line 38
+[09-Dec-2018 08:01:21 UTC] PHP Warning:  Missing argument 1 for getProductInfo(), called in /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php on line 41 and defined in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 123
+[09-Dec-2018 08:01:21 UTC] PHP Stack trace:
+[09-Dec-2018 08:01:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php:0
+[09-Dec-2018 08:01:21 UTC] PHP   2. getProductInfo() /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php:41
+[09-Dec-2018 08:01:21 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php:128
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php(128): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php(41): getProductInfo()
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 128
+[09-Dec-2018 08:01:56 UTC] PHP Fatal error:  Cannot redeclare getProductInfo() (previously declared in /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php:9) in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 123
+[09-Dec-2018 08:01:56 UTC] PHP Stack trace:
+[09-Dec-2018 08:01:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php:0
+[09-Dec-2018 08:02:41 UTC] PHP Fatal error:  Cannot redeclare displayCategories() (previously declared in /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php:20) in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 13
+[09-Dec-2018 08:02:41 UTC] PHP Stack trace:
+[09-Dec-2018 08:02:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php:0
+[09-Dec-2018 08:03:40 UTC] PHP Fatal error:  Cannot redeclare displayCategories() (previously declared in /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php:20) in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 13
+[09-Dec-2018 08:03:40 UTC] PHP Stack trace:
+[09-Dec-2018 08:03:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php:0
+[09-Dec-2018 08:03:41 UTC] PHP Fatal error:  Cannot redeclare displayCategories() (previously declared in /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php:20) in /home/ubuntu/workspace/cst336/projects/witchMart/inc/functions.php on line 13
+[09-Dec-2018 08:03:41 UTC] PHP Stack trace:
+[09-Dec-2018 08:03:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/projects/witchMart/updateProduct.php:0

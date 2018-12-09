@@ -22,16 +22,6 @@ validateSession();
             .jumbotron{
                 text-align:center;
             }
-            /*#container{*/
-            /*    text-align:center;*/
-            /*    margin:0 auto;*/
-            /*    border:solid white 1px;*/
-            /*    margin-left:400px;*/
-            /*    margin-right:400px;*/
-            /*    padding-top:15px;*/
-            /*    background-color:white;*/
-            /*    color:black;*/
-            /*}*/
         </style>
         <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/coreui-icons.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css" />
@@ -56,9 +46,9 @@ validateSession();
     
     </head>
     <body>
-    <div class="jumbotron">
-        <h1> ADMIN SECTION - Hogwarts Express</h1>
-    </div>
+    <?php
+        include 'inc/adminHeader.php';
+    ?>
     
     <!-- fist container that will center it -->
     <div class="container">
@@ -66,7 +56,7 @@ validateSession();
         <!-- div for admin box -->
         
         <div class="admin">
-         <h3>Welcome <?= $_SESSION['adminFullName'] ?> </h3>
+         <h3>Welcome, <?= $_SESSION['adminFullName'] ?> </h3>
 
           <form action="addProduct.php">
               <input type="submit" class="btn btn-outline-dark" value="Add New Product">

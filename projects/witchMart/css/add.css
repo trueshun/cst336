@@ -1,41 +1,38 @@
 .jumbotron{
-    /*background-color: #667A83;*/
+    text-align: center;
 }
-.container{
+.outerBox{
     margin:0 auto;
 	width:725px;
-	height:100%;
+	height:540px;
     border-color: #585350;
     border-style: solid;
     border-width: 1px;
     padding-top: 10px;
     background-color: #728E99;
     border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
-.admin{
+.nameBox{
     border:solid #585350 3px;
-    padding-left: 3px;
-    padding-bottom: 2px;
-    margin-right: 270px;
-    background-color: #9DBB9F;
-    border-radius: 10px;
-}
-.reportBox{
-    border:solid #585350 3px;
-    margin:auto 0;
-    text-align: center;
-    padding-bottom: 5px;
+    margin-right: 300px;
+    padding-left: 10px;
     background-color: #9DBB9F;
     border-radius: 15px;
 }
-.listBox{
+.titleBox{
     border:solid #585350 3px;
-    margin:0 auto;
-    width:500px;
-    padding-left:15px;
-    padding-right: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
     background-color: #9DBB9F;
+    padding:10px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+.returnBox{
+    margin: 0 auto;
+    width:210px;
+    border:solid #585350 3px;
+    background-color: #9DBB9F;
+    padding:10px;
     border-radius: 15px;
 }

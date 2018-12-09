@@ -22,7 +22,6 @@
         <style>
             body{
                 text-align:center;
-                margin:0 auto;
             }
         </style>
     </head>
@@ -33,54 +32,61 @@
 	    ?>
 
         <br />
-        <form method="post" action="loginProcess.php" class= "adminbox">
-            Username:  <input type="text" name="username"/> <br>
-            Password:  <input type="password" name="password"/> <br>
-            <input type="submit" value="Admin Login">
-        </form>
-        <br />
-        <!-- post normal shop viewing if not logged in as admin here -->
-        <form class = "box" >
-            Product: <input type="text" name="productName" placeholder="Search Here" class ="searchInputs"/> <br />
-            
-            Category: 
-            <select name="category" class ="searchInputs">
-               <option value=""> -Select one- </option>  
-               <?=displayCategories()?>
-            </select>
-            <br>
-            Price: From: <input type="number" name="priceFrom" size="7" class ="searchInputs"/> 
-             To: <input type="number" name="priceTo" size="7" class ="searchInputs"/>
-            <br>
-            
-            Order Price By: <br>
-                <input type="radio" name="orderBy" value="low-high">
-                low-high <br>
-                <input type="radio" name="orderBy" value="high-low"> 
-                high-low <br>
-            <br>
-            Order Name By: <br>
-                <input type = "radio" name = "orderBy" value ="az">A-Z
-                <input type = "radio" name = "orderBy" value ="za">Z-A
-                <br />
-                <input id='search' type="submit" name="submit" value="Search!"/> 
-        </form>
-        
+        <div class="outerBox">
+            <div class="adminTitle">
+                Log in <br />
+            </div>
+            <div class ="adminBox">
+                <form method="post" action="loginProcess.php" class= "adminbox">
+                    Username:  <input type="text" name="username"/> <br />
+                    Password:  <input type="password" name="password"/> <br /> <br />
+                    <input type="submit" class="btn btn-outline-dark" value="Admin Login">
+                </form>
+            </div> <!-- adminBox close -->
+            <br />
+            <!-- post normal shop viewing if not logged in as admin here -->
+            <div class="innerBox">
+            <form class>
+                Product: <input type="text" name="productName" placeholder="Search Here" class ="searchInputs"/> <br />
+                
+                Category: 
+                <select name="category" class ="searchInputs">
+                   <option value=""> -Select one- </option>  
+                   <?=displayCategories()?>
+                </select>
+                <br>
+                Price: From: <input type="number" name="priceFrom" size="7" class ="searchInputs"/> 
+                 To: <input type="number" name="priceTo" size="7" class ="searchInputs"/>
+                <br>
+                
+                Order Price By: <br>
+                    <input type="radio" name="orderBy" value="low-high">
+                    low-high <br>
+                    <input type="radio" name="orderBy" value="high-low"> 
+                    high-low <br>
+                <br>
+                Order Name By: <br>
+                    <input type = "radio" name = "orderBy" value ="az">A-Z
+                    <input type = "radio" name = "orderBy" value ="za">Z-A
+                    <br />
+                    <input id='search' type="submit" name="submit" class="btn btn-outline-dark" value="Search!"/> 
+            </form>
+            </div><!-- innerBox clos -->
+        </div><!-- outerBox close -->
         <br>
         <hr>
-        
         <hr>
         <br />
-        <?php
-            if($_GET['submit'] == "Search!") {
-                echo "<h2>Search Results </h2>";
-                filterProducts();
-            }
-        ?>
-    
-        <br /><br />
-        <footer>
-            &copy;Chavez 
-        </footer>
+        <div class="searchResults">
+            <?php
+                if($_GET['submit'] == "Search!") {
+                    echo "<h2>Search Results </h2>";
+                    filterProducts();
+                }
+            ?>
+        </div><!-- searchResults end -->
     </body>
+    <?php
+        include 'inc/footer.php';
+    ?>
 </html>

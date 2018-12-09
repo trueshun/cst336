@@ -1,25 +1,74 @@
   body{
-    background-color:#212529;
+    background-color:#5B7D86;
     color: white;
   }
   .jumbotron{
-    background-color: #2C3034;
-    /*background-image:linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.2)), url("../img/jumboBg.jpg");
-    background-size:cover;*/
-    background-image: url("../img/jbImage.png");
+    background-color: #2E323C;
+    /*background-image:linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.2)), url("../img/jumboBg.jpg");*/
+    /*background-size:cover;*/
+    background-repeat: no-repeat;
+    background-image: url("../img/jumboBg.png ");
+
+    background-position: center; 
+    height: 300px;
     color:white;
   }
-  .box{
-    /*border: solid white .1px;*/
-    margin-left: 550px;
-    margin-right: 550px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+  .outerBox{
+    margin:0 auto;
+	  width:725px;
+  	height:100%;
+    /*border-color: #585350;*/
+    /*border-style: solid;*/
+    /*border-width: 1px;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*background-color: #45405D;*/
+    border-radius: 40px;
+  }
+  .adminTitle{
+    border:solid #585350 3px;
+    padding-left: 10px;
+    background-color: #90B3BB;
+    color: black;
+    border-radius: 10px;
+    margin:0 auto;
+    margin-right: 300px;
+    margin-left: 300px;
+  }
+  .adminBox{
+    margin:0 auto;
+    font-weight: bold;
+    color:black;
+    border:solid #585350 3px;
+    background-color: #90B3BB;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding-bottom: 10px;
+    padding-top:15px;
+    border-radius: 30px;
+  }
+  .innerBox{
+    margin:0 auto;
+    font-weight: bold;
+    color:black;
+    border:solid #585350 3px;
+    background-color: #90B3BB;
+    border-radius: 30px;
+    margin-left: 85px;
+    margin-right: 85px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .searchResults{
+    margin:0 auto;
+    border:solid #585350 3px;
+    background-color: #90B3BB;
+    width:50%;
     border-radius: 15px;
-    border-style: inset;
-    background-color: #2C3034;
-    color:white;
-    /*background-image:linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.2)), url("../img/jumboBg.jpg");
-    background-size: cover;*/
+  }
+  footer{
+    text-align: center;
+    background-color: #2E323C;
+    border:1px solid black;
   }
   

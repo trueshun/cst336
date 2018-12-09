@@ -86,7 +86,7 @@
             //echo "<td><h2><a href='purchaseHistory.php?productId=".$record['productId']."'>";
             //echo "<td><h2>".$record['productId'];
             echo "<td><h2>".$record['productName']. "<h2></td>";
-            //echo "<td><h4>".$record['productDescription']. "<h4></td>";
+            echo "<td><h4>".$record['productDescription']. "<h4></td>";
             echo "<td><h2>Price: $" .$record['price']. "</h2></td>";
             
             echo "<td><form method ='post'>";
